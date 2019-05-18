@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>chapter15</title>
+<!-- 2019-05-18 Sat 16:14 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="liuweibo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">chapter15</h1>
+<p>
+阿丽塔在黑暗中坠落, 越坠越深. 她的心绪开始蔓延: <i><b>内心深处, 狂徒怒吼. 无底险渊, 任我遨游!</b></i> 风不断吹过她的脸庞, 将她的秀发往后拂. 大地正在吞噬她. 要掉到怪兽的肚子里面还有很长的一段路, 很长的一段路, 不断的坠落, 坠落, 坠落, 坠落 &#x2013;
+</p>
+
+<p>
+一堆垃圾冲上来迎接她. 降在一堆垃圾上已经渐渐成了一种习惯了. 她一边这样想, 一边从石堆顶上滑下来, 摆好格斗式. <i>呵, 挺深的, 你还有什么把戏?</i> 她默默地说.
+</p>
+
+<p>
+黑暗中传来一阵笑声, 这声音似乎是从四面八方传过来. 金属的震动让她仿佛置身坦克里面. 阿丽塔眨了眨眼睛, 一边四处寻找敌人的踪迹, 一边希望眼睛尽快适应这黑暗.
+</p>
+
+<p>
+"欢迎来到地底世界 &#x2013; 我的世界!" 格鲁依什卡低沉的笑声在这地底愈发地低沉而富有攻击性. 现在阿丽塔终于可以看清这里了: 潮湿破碎的墙壁上, 四五根并行的生锈的管道上, 长满了一块又一块的霉菌. 有一些管道向上弯曲, 消失在黑暗中; 另一些则通过拱形的出口汇入污浊的地下通道. 这拱形的出口如同雨果那教堂里面空缺的窗户一般.
+</p>
+
+<p>
+但是这里不是教堂, 也不是任何神圣的地方. 如果格鲁依什卡在这里, 那么这里就是神圣的反义词.
+</p>
+
+<p>
+"自此之上, 有一层又一层的世界," 格鲁依什卡一边说道, 一边从她眼前的黑暗中慢慢现身. "一直延展到你这只臭虫想象不到的还要远的地方." 他低沉的声音慢慢变成讥讽. 回声使得他的声音更加令人厌恶: 每个字都像打在身上的一拳. "上层的垃圾都会掉入到它下面的一层, 直到最终所有的垃圾都汇聚于此. 这里就是不被接受, 不被需要, 被抛弃的事物之地."  格鲁依什卡走得更近了, 近到阿丽塔可以看到他正在像一只机械滴水兽<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>一样朝她笑. "这就是我曾经生活过的地方&#x2013;"
+</p>
+
+<p>
+"这也将是你的葬身之所!" 阿丽塔说道.
+</p>
+
+<p>
+她向格鲁依什卡扑去; 她躲过他的拳头, 越过过他的丑陋的脑袋, 从墙上反蹬一脚, 然后一个劈腿砸在格鲁依什卡的肩膀上. 她想要再次卸下格鲁依什卡的手臂, 但是未能成功. 她弹跳开来, 落在了污秽的水泥地面上. 她没有对格鲁依什卡造成伤害. 绮莲已经将他关节上的弱点修复了, 并且让他更加强壮, 更加难对付了. 恐怕唯独难以复加的恐怕就是他的恶心程度了, 阿丽塔这样想. 他伸出他的右手, 手指纷飞.
+</p>
+
+<p>
+五个爪镰射了出去, 锋利的指尖扎在了混凝土上, 将一堆油腻潮湿的的碎块扬起. 面对迫近的呼啸而至的爪镰利刃, 阿丽塔做了一个空翻, 落地后又接了几个筋斗.
+</p>
+
+<p>
+"就是这样 &#x2013; 跳舞吧! 你这个跳蚤, 跳舞!" 格鲁依什卡笑着, 好似阿丽塔的每个动作都是回应他的命令, 为了取悦他. 阿丽塔一边侧翻一边逐渐靠近格鲁依什卡, 她倾尽全力向格鲁依什卡冲去, 将整个身体的动力链的力量传导到双手上, 狠狠地击打了他.
+</p>
+
+<p>
+格鲁依什卡向后猛退了几步, 撞进了一堵发霉的墙中. 这墙在他的头顶崩塌, 将他掩埋在巨石大小的超市的混凝土中. 阿丽塔向连续地向后做了一系列的空翻, 差点跌倒, 最后一个大跳, 弹起来立稳身形, 结果发现她的右腿发软. 她低头只看见亮蓝色的机械血液从她的膝盖渗出来, 关节附近感受到若有若无, 星星点点的能量在跳动. 崴货伺服器 &#x2013; 妈的, 就是 <i>这么</i> 不完美.
+</p>
+
+<p>
+突然间, 阿丽塔感觉到腐臭的空气中有一丝异样, 将头向右转, 只看见格鲁依什卡正在向她冲锋, 爪镰在空气中扭动翻滚. 阿丽塔翻了一个筋斗躲开, 准备为两连的空翻积蓄动量. 如果她移动得足够块, 她的那条不好使的腿就不会给她带来太大的麻烦. 结果她还是触地了, 颤颤巍巍用另一条腿支撑身体. 她的膝盖失去太多的机械血液了. 一条爪镰的刀刃向她飞来, 射远了几英尺, 但是在收回去的时候在阿丽塔的臀部划出了一条很深的伤口. <i>他妈的!</i> 阿丽塔这下麻烦了, 既要照顾膝盖, 又要注意屁股.
+</p>
+
+<p>
+仅仅只是麻烦了吗? 更可能是, 输定了. 她躲在一堵厚厚的水泥柱后面, 得以片刻用于思考和喘息. 这水泥柱立在两条出口中间的空地上, 就像抉择之间命运的分野. 而阿丽塔已经决定了: 如果她注定葬身于此, 她也要与那个杂种同归于尽, 就差一个方法.
+</p>
+
+
+
+<hr  />
+
+
+
+<p>
+"全都怪 <i>你</i>!" 伊德一边顺着梯子往下爬, 一边愤怒的说.
+</p>
+
+<p>
+在他的下面, 雨果迅速地抽回梯子上的手, 避免伊德踩在上面. "嘿, 你才是那个把她逼到这种境地的人, 不是我!" 他说. 说话这会儿, 他们已经往下走了七八层恶臭的台阶. 这一路上, 伊德一直在抱怨雨果, 抱怨每一件已经发生的坏事. 这番抱怨让雨果想起了他第一次带阿丽塔去看机动球的时候她跟他抱怨的事情. 这抱怨彼此, 可真某种程度上算是有其父必有起女啊! 雨果心想. 这番回忆让他发笑, 但是笑容仅仅持续了一秒钟. 就是在看机动球的夜晚, 他的团队为维克多抢劫了基努巴. 这直接导致了今天这个糟糕的局面. 妈的! 也许这真的是他的错, 雨果可怜地想. 比现在更糟糕的只有当伊德发现这次抢劫了.
+</p>
+
+<p>
+雨果摇摇头, 将这个想法从脑子里面赶出去. 他不停地下楼梯, 往底下走. 伊德说这些梯子是给维护工使用的通道. 但是雨果很确定上一次有维护工经过这是在他出生之前的事情了. 梯子上布满了陈年的铁锈, 油腻的泥土, 还有只有老天知道的鬼东西. 每往下一层, 来几的臭味就更强, 这给他们这趟旅程真是添了不少料. 如果这个气味继续加强, 那么他们到底之后, 会在见到阿丽塔之前呕吐而死的.
+</p>
+
+<p>
+伊德爬下梯子, 粗暴地从雨果身边擦身而过. 伊德把他的体恤做一个临时的火箭锤的包裹, 这样他就可以腾出双手来了. 但是这个姿势让他走路很奇怪. 如果直到他们到底之前他都没有被绊倒, 那就很幸运了.
+</p>
+
+<p>
+医生已经找到了通往下一层的梯子 &#x2014; 他们在崎岖的道路上盘旋, 像是走一条随机的路. "嘿! 你, 黑市坏小子!" 伊德喊道 "睡醒了! 走!"
+</p>
+
+
+
+<hr  />
+
+
+<p>
+阿丽塔的背贴近柱子站立. 臀部的划痕仍然在快速地失血. 她的膝盖随时都要短路死机, 而此时格鲁依什卡仍然沉浸在对自己的声音的喜爱中喋喋不休. 他到底在 <i>讲什么?</i>
+</p>
+
+<p>
+"我曾经是被遗忘的人" 丑陋的野兽用严肃的声音低沉地说到, 仿佛这是他讲过的最重要起源故事. "我曾经是不被需要的人, 被遗弃, 与垃圾一起腐朽. 我曾经认为我的命运就是腐烂, 消失. 不被这个漠不关心的世界所哀悼, 即使同我一起腐烂的垃圾就是这个世界创造出来的."
+</p>
+
+<p>
+<i>能快一点吗?</i> 阿丽塔心想. <i>我想要在我自己挂掉之前先弄死你!</i> 她绕过水泥柱看了正在朝她笑的格鲁依什卡一眼, 然后飞快的抽回身来.
+</p>
+
+<p>
+"就在那时, 有人看见了我 &#x2014; 看见了我, 正视了我, 拥抱了我. 于是我被拯救了, 重制了. 拯救我的那个人此时此刻也在塑造你的命运!"
+</p>
+
+<p>
+阿丽塔感觉这个怪物把世界的坐标轴上踩了一脚, 整个世界都因此倾斜; 然后又在她肚子上踩了一脚, 疼得她无法呼吸.
+</p>
+
+<p>
+不! 她又踩了一脚, 把这个世界重整乾坤, 她大踏步从水泥柱后面走出来.
+No. She kicked the world back where it belonged, straightened up, and stepped out from behind the column.
+</p>
+
+<p>
+"谁的手?" 她问道. "你想聊天吗? 回答我, 现在! &#x2014; 谁的手?"
+"Whose hand?" she demanded. "You wanna talk? Answer right now &#x2014; whose hand?"
+</p>
+
+<p>
+格鲁依什卡滴水兽一样微笑的嘴奇异地咧得更开了. "我的主人." 他举起他的拳头. "我的主人, 诺瓦."
+Grewishka's gargoyle grin widened. "My master." He raise hist fist. "My master, Nova."
+</p>
+
+<p>
+"关于我, 你都知道些什么?" 阿丽塔怒吼道.
+"What do you know about me?" Alita shouted.
+</p>
+
+<p>
+格鲁依什卡张开他的手指, 爪镰倾泻而出. 阿丽塔跳向空中, 轻展猿臂, 扭动身体. 但是爪镰似乎已经能够预测她的移动了. 长长的刀刃朝她收拢, 她觉得有什么锋利的东西穿过了她的躯体, 其中一条切断她一条手臂, 另外一条从腰线把她切成两半, 第三条在大腿处横切两半.
+Grewishka splayed his fingers and the grind-cutters flew out from them. Alita leaped into the air, twisting and flipping, but the grind-cutters seemed to anticipate ther moves now. The long blades converged on her and she felt something sharp pass through her torso, severing one arm. Another blade sliced her in half at the waist while a third cut off her legs at mid-thigh.
+</p>
+
+<p>
+她又在坠落了. 不像之前那般长, 很快她就和污浊的水泥地来了个亲密接触. 脏水的臭味和在她身周, 四处洒落的干净的, 有淡淡香味的机械血液的气味混合在一起. 黑暗中的某处, 似乎是伊德的恐惧的大喊声传过来. 阿丽塔认为每个人在这个幽暗的深渊里面都要发出自己的吼声.
+She was falling again, not as far as before but somehow it seemed to take a long time before she and the filthy concrete rushing towards her finally met. The smell of dirty water and damp stone fought the clean, bright fragrance of cyber-blood spalshing out of her limbs as they fell around her. Somewhere in the darkness a voice very like Ido's cried out in horror. Alita supposed everone made their own cry from the depths and the darkness.
+</p>
+
+<p>
+她抬起她的头, 弯曲她仅剩的一只手臂, 开始在地上往外爬, 一次几厘米. 这就像上次雨果带她去破败之地, 他们坐在货车里等待着出城的样子. 不过这一次, 她比上次移动得更慢, 然而她拒绝躺平. 她还没死, 还没 &#x2014;
+</p>
+
+<p>
+Raising her head, she flexed her remaining arm and began to drag herself away. She could only manage a few centimetres at a time. It was like when they were in the van waiting to get out of Iron City the day Hugo took her to the Badlands; what a wonderful day that had been. She was going even more slowly now, but she refused to lie down. She wasn't dead, not yet &#x2014;
+</p>
+
+<p>
+一阵寂静悄然散开, 一道白光闪过, 瞬间抹去了阴暗悲惨的黑暗. 她发现她正在 &#x2014;
+A silent explosion of white light obliterated the damp, grimy darkness and she was &#x2014;
+</p>
+
+<p>
+飞. 她正在飞. 在无重力的 0G 训练球里面飞. 她的动作锐不可当, 没有什么东西能阻止她腾挪闪躲.
+Flying. She was flying, weightless in the zero-g training sphere, completely free, nothing resisting her movements, nothing to stop her twisting and tumbling.
+</p>
+
+<p>
+她也很年轻, 非常年轻 &#x2014; 十岁大. 她是一个十岁大的机械人, 然而她已经知道如何使用手里的格斗棒了. 在她手中, 这格斗棒可不仅仅只是熟悉, 简直是完美. 她知道棒子的质量, 长度, 如何格挡, 她知道如何在抵挡面前这个向她冲来, 手里也拿着自己的格斗棒的女人.
+And she was young, ver young &#x2014; ten years old. She was a ten-year-old cyborg and she already knew how to use the fighting stick in her hand. The stick was more than familiar in her grip; it was perfect. She knew the mass, the length, how to counterbalance, and she knew how to defend herself against the woman coming at her with her own fighting stick.
+</p>
+
+<p>
+盖尔达, 这个女人是盖尔达, 终归有一天, 他们会在月球上并肩作战, 但是现在盖尔达是她的老师.
+Gelad. The woman was Gelda, and one day they would fight side by side on the moon, but now Gelda was her <i>sensei</i>
+</p>
+
+<p>
+"他们一直说你太年轻了, 太小了." 盖尔达说道, 她的脸生机勃勃, 充满了奋力的咬牙切齿和战士强烈的自豪. "但是他们错了!"
+"They're telling me you're too young, to small," Gelda said, her face alive and glowing with physical exertion and fierce warrior pride. "But they're wrong!"
+</p>
+
+<p>
+阿丽塔用一阵强烈的踢和击打回应她的攻击, 格挡住盖尔达的棒子, 并且击中了她几次. &#x2014; 但是仅仅是几次而已.
+Alita met her attack with a flurry of kicks and strikes, parrying Gelda's stick and socring a few blows of her own &#x2014; but only a few.
+</p>
+
+<p>
+"我看到了你的本心," 盖尔达说. "你有一颗武者之心!"
+"I saw what you lived through," Gelda said. "You have the soul of a warrior!"
+</p>
+
+<p>
+阿丽塔的心翻涌沸腾, 乐得生花, 而她的身体继续攻击盖尔达, 希望能够配得上她的老师的赞赏.
+Alita's heart swelled with joy as she struck at Gelda, wanting to be worthy of her sensei's praise.
+</p>
+
+<p>
+"你永远也不会放弃," 盖尔达一边对她说, 一边轻轻地转身, 格挡阿丽塔的动作. "你永远也不会放弃. 绝不! 放弃!"
+"You'll never give up," Gelda told her, only slightly winded as she countered Alita's move. "You'll never stop. Never. Stop."
+</p>
+
+<p>
+盖尔达移动到侧翼; 阿丽塔相应动作做出防御架势. 盖尔达的手臂伸出, 将阿丽塔往回拉. 他们的脸只有几厘米远, 阿丽塔感受到了盖尔达冰冷而扁平的刀刃抵住她的喉咙.
+Gelda made a move to one side and Alita started to make the proper defensive parry. Gelda's arm shot out and pulled her close. Their faces were only centimetres apart and Alita felt the cold flat blade of Gelda's knife against her throat.
+</p>
+
+<p>
+"善于发现未知," 阿丽塔的老师严肃地说.
+"Know what is hidden," Alita's snesei saide sternly.
+</p>
+
+<p>
+盖尔达仔细打量阿丽塔, 然后让她离开. 阿丽塔冷静地接上她老师的目光, 脸上露出一副冷酷没有表情的样子, 这冷酷的表情掩藏了她被击败的事实. 狂战士即是这样, 永远也不会将被击败的表情透露给对手, 永远也不会让对方觉得你已经被征服, 永远也不要让对方的恐惧渗入你的脑海, 即便是你已经快要挂了.
+Gelda watched Alita closely as she let her go. Alita met her gaze steadily, composing her face into a stony, expressionless mask that wouldn't show her defeat. You never showed defeat to an opponent, never let them see you felt conquered, never let them into your head, not even if you were dying.
+</p>
+
+<p>
+"总是要问自己: 有什么是你没看到的?" 盖尔达说.
+"Always ask: what is it that you are not seeing?" Gelda said.
+</p>
+
+<p>
+阿丽塔然后窥见了他, 那个在观察室里的男人. 他一直在观察, 但是他没有眼睛. 取而代之的是他有一副镀铬的手术眼镜. 铬的级别是最高的, 仅为那些精英中的精英保留. 这样的精英阶层如此的稀少, 以至于没有任何比他们地位低的阶层的人打过交道, 包括像阿丽塔这样的人.
+Alita say him then, the man in the obeservation gallery. He had been watching, but he had no eyes. Instead, he had chrome surgical optics. Chrome was the highest grade, reserved for the most elite of the elite, a social class so rarefied they were never actually seen by any of lesser stature, including people like her.
+</p>
+
+<p>
+只有她看到了他, 她也直到他正在看着她. 闪着金属光泽的眼镜地位如此崇高, 看上去就像是一个毫不在意的外科手术医生把它挤到他的脸上, 并且在他的脸上留下了一堆修修补补的痕迹.
+Only she did see him, and she saw him seeing her. As exalted as his chrome optics were supposed to be, they looked like they had been pushed into his head by a careless surgeon who had left too much sticking out of his face.
+</p>
+
+<p>
+这个男人正在微笑, 但是并不是在冲着她微笑. 更像是他在享受一个除了他之外没有任何人懂的笑话.
+The man was smiling, but not at her. It was more like he was enjoying a private joke no one else would understand.
+</p>
+
+<p>
+"只有你看到了隐藏在深处的东西你才可能赢!" 盖尔达说, "再来!"
+"Only then you see what is hidden can you win!" said Gelda. "Again!"
+</p>
+
+<p>
+阿丽塔在空中旋转.
+Alita twisted in the air &#x2014;
+</p>
+
+<p>
+然后她回到了肮脏的水泥地面上, 试图用她的仅剩的一只胳膊爬走, 而格鲁依什卡现在跪在她身旁嘲笑她. 他将他的手指伸进她的头发里面, 将她举了起来, 她悬空的样子仿佛是一只破碎的玩偶.
+And she was back on the filthy conrete floor, trying to drag herself away with her one arm while Grewishka knelt beside her and laguhed. He dug his fingers into her hair and lifted her up so she dangled like a broken doll.
+</p>
+
+<p>
+"喔! 我的小玩具不想玩了?" 他的脸是如此的近, 阿丽塔甚至能感受到他说话时嘴里的恶臭.
+"Aw, my little toy doesn't want to play any more?" His face was so close she could feel his fetid breath as he spoke.
+</p>
+
+<p>
+阿丽塔怒目圆瞪, 让他看到她的拒绝, 拒绝投降, 放弃亦或是屈服. 那是永远也不可能的.
+Alita stared back, letting him see her refusal to give out, give in or give up. Ever.
+</p>
+
+<p>
+"我要把你做成一只活的项链来点缀我的胸膛," 格鲁依什卡用癫狂低沉的声音说道. "我将一只把你戴在身上, 那样每一天的每时每刻我都能听见你的嚎叫, 祈求宽恕."
+"I'm going to turn you into a living pendant to adorn my chest," Grewishka said in a demented croon. "I'll wear you all the time so that every moment of every day, I can hear you screaming and pleading for mercy."
+</p>
+
+<p>
+阿丽塔往后退, 他的脸于是跟着往前伸 &#x2014; 正如她所预料的一样. 她用掌刀劈在他的脸上, 然后趁着他后退的时机从他的手中脱身出来. 由于体重的减轻, 一只胳膊对于她来说就足够了. 她五指开立撑住自己, 平稳地落在了地上, 然后慢慢的浅下身子, 靠近地面. 亮蓝色的机械血液仍在从她的身体里面喷涌而出, 虽然流速已经开始放缓, 她现在正在一层这样的血液里面, 不过她知道对于她想要做的事情来说, 这已经足够了.
+Alita drew back from him, and he pushed his face forward &#x2014; just as she'd hoped he would. She thrust her open palm into his face and tore herself out of his grasp as he fell back. With her decreased mass, one arm was all she needed. She guided herself into a perfect landing on her open hand, then lowered herself slowly to the cement. Bright-blue cyber-blood was still pouring out of her, although it was starting to slow. She was in a pool of it now but she knew there was enought left for what she wanted to do.
+</p>
+
+<p>
+格鲁依什卡艰难地站起来, 愤怒的咆吼. 天哪, 愤怒使他愚蠢. 正当他怒冲冲地朝她冲过来的时候, 阿丽塔将她的身体伸开, 展平她的的胳膊肘, 将自己推射到空中, 旋转着朝格鲁什卡尔奔过去. 她的手臂伸直, 手掌平齐聚成掌刀, 笔直地插到他的眼睛里.
+Grewishka struggled to his feet, roaring with rage. Good; anger made him stupid. As he came thundering at her, she raised her body up, flexed her elbow and launched herself into the air. Sending herself into a spin, she aimed herself at Grewishka. Keeping her arm straight out, she flattened her hand like a blade and plunged it into his eye.
+</p>
+
+<p>
+现在他的叫声又尖又颤抖, 充满了疼痛和恐惧的感觉. 阿丽塔稳住身形, 直视他的另一只完好的眼睛.
+Now his scream was high and shrill, full of pain and terror. Alita smiled as she steadied herself so she could look directly into his other eye.
+</p>
+
+<p>
+"去你妈的宽恕," 她说.
+"Fuck your mercy," she told him.
+</p>
+
+<p>
+她尝试将她的手抽出来, 但是它在里面卡住了, 也许是被某个配件卡住了. 某种程度上, 她想, 这样说不定更好. 她扭动她的手, 前臂在手腕处断裂开来, 她从他身上掉下来.
+She tried to yank her hand free but it was caught on something inside, probably one of his enhancements. In a way, that was even better, she thought. She twisted hard until her forearm cracked and broke just above her wrist and she dropped away from him.
+</p>
+
+<p>
+<i><b>好好享受这个纪念品, 这可比吊坠好多了. 上面还刻着花呢. 我把一朵花留在了你的眼睛里面, 漂亮的花. 不客气!</b></i>
+<i>Enjoy the souvenir, It's better than a pendant. There's a flower on it. I left a flower in your eye, a beautiful flower. You're welcome.</i>
+</p>
+
+<p>
+格鲁依什卡的叫声现在多了一份狂怒, 但是并不是很多 &#x2014; 他声音里更多的成分仍然是疼痛. 阿丽塔看着他笨拙地朝她走来, 用手盖着种了朵花了的眼睛. 这朵花会一直在那里的, 阿丽塔这样想; 即使人们从他的眼睛里把它拔出来, 给他装上一只新的更好的眼睛, 他也会一直记得她的这朵小花给他带来的疼痛的感觉, 只要他还活着.
+Grewishka's scream deepened with outrage, but not a lot &#x2014; there was still more pain than anything else in his voice. Alita watched him lumber towards her, his hand over the eye with the flower in it. The flower would always be there, she thought; even after they took it out and gave him a new and better eye, he'd still feel the pain of her pretty little flower for as long as he lived.
+</p>
+
+<p>
+阿丽塔朝着格鲁依什卡笑着, 而他正要抬起他的脚踩在阿丽塔身上.
+She smiled up at him as he raised his foot to stomp her.
+</p>
+
+<p>
+她看到接下来的事情是格鲁依什卡卡向边上蹒跚了两步. 当她听到确信无疑的火箭锤的的声音的时候, 一阵喜悦涌上她的心头. 接下来一只燃烧瓶在格鲁依什卡身上炸裂开, 火焰吞噬了他的上半身, 又让他尖叫了起来.
+The next thing she knew, Grewishka was staggering sideways. Joy surged through her as she heard the unmistakable sound of the Rocket Hammer. In the next movement, a fire-bottle broke over Grewishka, engulfing his upper body in flames, making him scream again.
+</p>
+
+<p>
+阿丽塔瞥见了雨果, 但在这之前, 有些迅速而凶猛的生物扑到了格鲁依什卡身上, 龇牙咧嘴, 低声怒吼, 将他赶开了. 其余的地狱犬正在攻击他, 撕开他的护甲, 撕裂内部的器件.
+Alita caught a glimpse of Hugo before something fast and vicious slammed into Grewishka, snarling and growling as it drove him back. Then the rest of hellhounds were on him, ripping his armour, going for his exposed innards, biting and snapping.
+</p>
+
+<p>
+格鲁依什卡一边将地狱犬扯开, 一边尖叫, 逃离进了一条通道. 地狱犬仍然在追赶他, 凶狠地犬吠, 直到训犬大师出现, 召集回他的狗. "停下! 回来! 马上!"
+Still screaming, Grewishka tore the Hellhounds away from himself and fled into a passageway. The Hellhounds went after him, barking furiously uitl McTeague appeared and hollered, "Break off! Come! Now!"
+</p>
+
+<p>
+地狱犬四肢奔腾, 跑回他的身边, 围成了一个保护性的包围圈, 包围了他, 依德和雨果. 阿丽塔记得她的朋友 &#x2014; 那条无主的小狗, 眼泪顿时涌上了眼眶. 训狗大师和她目光相对, 眼里充满了同情.
+The Hellhounds came galloping back to him and formed a protective circle around him, Ido and Hugo. Alita remembered her friends, the little stray, and felt her eyes well with tears. McTeague met her gaze with eyes shiny with empathy.
+</p>
+
+<p>
+"他不喜欢狗," 训狗大师严肃地说, "我可不喜欢这样."
+"He wasn't a dog-lover," McTeague explained grimly. "I hate that."
+</p>
+
+
+
+<hr  />
+
+
+
+<p>
+依德已经几乎听不见训狗大师的话了. 他跪在阿丽塔破碎的身体边上, 用手把她的头发从脸上往后梳. 阿丽塔抬头看着他; 他发现, 经历了这些风风雨雨, 他的心仍然会受伤.
+Ido barely heard McTeague's pronouncement. He fell to his knees beside Alita's torn and shattered form and brushed her hair back from her face. She looked up at him; and he discovered his heart could still break after all.
+</p>
+
+<p>
+噢, 他的小女孩. 他曾经的女儿, 这样的事情又发生了. 一个恶魔, 因他而起, 不受控制, 四处为虐; 而他的女儿恰好挡在了路上. 绮莲事实上打造了这个怪物只是技术问题 &#x2014; 他才是触发整个事件, 造成现在的局面的人, 他没有做任何事情来阻止这场厄运的变本加厉.
+His little girl. She was his little girl, and it had happended again. A demon he was responsible for had gone on a rampage and his little gir had been caught in its path. That Chiren had actually made this monster was only a technicality &#x2014; he had set all the things in motion that had led to this, and he had done nothing to stop this horror from getting loose.
+</p>
+
+<p>
+噢, 他的阿丽塔, 她并不是无助的; 她曾竭尽所能与这个邪恶的造物殊死一搏 &#x2014; 真的是竭尽所能 &#x2014; 她甚至给这个造物造成了严重的伤害并阻止了他. 但是这个恶魔太过强壮, 疯狂, 甚至邪恶. 即使是她对他造成了如此的重创, 她也从未真正有机会与他一决高下. 依德没能保护好她 &#x2014; 即便是他本可以.
+His little Alita. She hadn't been helpless; she had fought the creature with everything she had &#x2014; literally everything &#x2014; and she had damaged it badly and driven it off. But the demon had been too strong, too crazed and too evil. For all that she'd hurt him, she'd never really had a chance against Grewishka. Ido had failed to protect her &#x2014; even though he could have.
+</p>
+
+<p>
+噢, 他的小姑娘. 本可以用来保护她的那件东西正躺在他的实验室的手术台上, 但是他拒绝为她装配这具身体. 相反的, 他在正义的自我坚持使得他像是一个道德傻瓜, 自我说服不给她狂战士的身体可以免于她再次成为人形武器, 这是最好的保护她远离邪恶的办法.
+His little girl. The very thing that could have protected her was lying on a table in his lab, but he'd refused to give it to her. Instead he'd been a self-righteous, moralising fool, convinced that not giving her the power of the Berserker body was the best way to protect her from evil.
+</p>
+
+<p>
+也许这是对的 &#x2014; 只不过不是在这个世界里, 在任何其他的世界里是有可能的.
+It might have been &#x2014; in any other wolrd but this one.
+</p>
+
+<p>
+噢, 他可爱的阿丽塔. 在历经种种一切之后, 他仍然拒绝相信这个世界的本质, 对环绕在她身边的危险视而不见. 更糟的是, 他一直拒绝她真实的身份, 企图改造她 &#x2014; 重造她 &#x2014; 变成一个甜美的, 漂亮的用花来装饰的年轻女孩. 结果他让她彻底失望了.
+His little Alita. After everything that had haappened, he'd managed to remain in denial about the nature of this world and the dangers around her. Worst of all, he'd been in denial as to who she really was, trying to make her &#x2014; remake her &#x2014; into a sweet, beautiful young girl adorned with flowers. As a result, he had failed her completely.
+</p>
+
+<p>
+依德用自己的胳膊将她拢在怀里.
+Ido gathered her up in his arms.
+</p>
+
+
+
+<hr  />
+
+
+<p>
+他们走到街上, 依德让雨果走前门, 用火箭锤前后划拉, 为他和他怀里的珍贵的负担开道. 他保护性地将阿丽塔抱在怀里. 他感受到自己呼吸里面的深沉, 稀稀拉拉的抽噎. 此刻他不在乎任何人或者任何事, 除了将他的宝贝女儿带回实验室中.
+Once they were on the street, Ido had Hugo run ahead, sweeping the Rocket Hammer back and forth to clear the way from him and the precious burden in his arms. He held Alita to his chest protectively, feeling his breath coming in great, ragged sobs, not caring about anyone or anything except getting his little gir back to the lab.
+</p>
+
+<p>
+绮莲站在堪萨斯酒吧撑开的门脸的阴影下.
+Then Chiren stepped out of shadows near the boarded-up Kansas Bar.
+</p>
+
+<p>
+如果此刻雨果用火箭锤锤这个女人, 依德想, 他会假装没看见.
+If Hugo hit her with the Rocket Hammer, Ido thought, he would pretend not to notice.
+</p>
+
+<p>
+"你以为一切会那么容易?" 绮莲冲他喊. "尽管治好她, 但是这样的事情我们可以一直做下去 &#x2014; 如果有必要的话! 你能吗? 戴森? 你能吗?"
+"You think it'll be that easy?" Chiren called to him. "Bring her back all you want, but we can do this indefinitely &#x2014; forever if we have to! Can you? Can you, Dyson?"
+</p>
+
+<p>
+依德从她身边擦过, 对她视而不见. 他感受到她的目光, 想象她枯萎, 凋零, 向内崩塌. 因为她的内心已经空空如也, 一无所有.
+Ido pushed past her like she wasn't there. He felt her staring after him and imagined her wilting, shrivelling, collapsing in on herself because there was nothing insde, nothing at all.
+</p>
+
+
+
+<hr  />
+
+
+<p>
+依德一路小跑, 但是他并不是在逃离绮莲, 这一点她很清楚 &#x2014; 她并不是自欺欺人. 现在他有一些东西要求他必须一路小跑. 很早之前她就失去了那样东西. &#x2014; 对于他们来说都是失去 &#x2014; 不会有任何事情改变这个事实.
+Ido was running but Chiren didn't try to kid herself &#x2014; he wasn't running from her. Now he had something to run to. She'd lost that a long time ago &#x2014; they both had &#x2014; and nothing would ever change that.
+</p>
+
+<p>
+但是他走了.
+她留下来了.
+But there he went.
+And here she stayed.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>译注: 建筑装饰, 类似镇脊兽. 蝙蝠侠常常蹲在滴水兽上, 俯瞰哥谭.</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: liuweibo</p>
+<p class="date">Created: 2019-05-18 Sat 16:14</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
