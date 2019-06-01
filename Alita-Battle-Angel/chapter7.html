@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>chapter7</title>
+<!-- 2019-06-01 Sat 15:59 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="liuweibo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">chapter7</h1>
+<p>
+阿丽塔想要悄悄溜进来, 却被依德抓了个现行. 他坐在一楼楼梯口, 身穿一条围裙. 围裙上的褶皱本应该让他看上去很蠢, 但是并没有这样.
+Ido caught Alita trying to sneak in undetected. He was at the top of the stairs leading from the basement, wearing an apron, which should have made him look silly with all the frills and ruffles, but it didn't, not even a little.
+</p>
+
+<p>
+"我说过要你天黑之前回家," 他一边严肃地对阿丽塔说, 一边带她进了厨房, 将她安置在桌子边上.
+"I asked you to be home before dark," he told her sternly, marching her into the kitchen and sitting her down at the table.
+</p>
+
+<p>
+"对不起," 她说. "我忘记时间了."
+"I'm sorry," she said. "I lost track of time."
+</p>
+
+<p>
+依德叹了口气. "我告诉过你, 不要信任任何人. 这里的人们对彼此做一些很可怕的事情."
+Ido sighed. "I told you, don't trust anyone. People can do terrible things to each other here."
+</p>
+
+<p>
+阿丽塔的目光落到了他前臂的绷带上. 依德趁着阿丽塔外出的时候换过一次了, 但是还是有一点血液渗出了绷带. 阿丽塔抬起头来看依德. " <i>你</i> 还好吗?" 她这样问, 在 "你" 上稍稍加强了语气.
+Her gaze fell on the bandage on his forearm. He'd changed it since she'd gone out but alittle heart's-blood had seeped through. She looked up at him. "Are you OK?" she askked with a slight emphasis on "you".
+</p>
+
+<p>
+"是的, 我很好," 他有些不耐烦地说道, 并且把一盘食物摆在她的面前. "把这个吃了. 你的大脑仍然需要适当的营养."
+"Yes, I'm fine," he snapped as he put a plate of food in front of her. "Eat this. You still need proper nourishment for your brain."
+</p>
+
+<p>
+阿丽塔犹豫了一下, 对着这盘晚餐迟疑地皱起了眉头. 这些东西闻起来味道不错但是看上去可不是那么让人开心. 她又抬起头看着依德. "你有巧克力吗?"
+She hesitated, frowing at her dinner doubtfully. It smelled pretty goood but it didn't look terribly exciting. She looked up at him again. "Do you have any chocalate?"
+</p>
+
+<p>
+他们彼此对望了好一会儿, 然后突然迸发出一阵笑声. 依德仍然微微发笑, 解释着玉米, 土豆, 绿豆, 鸡肉, 尤其是强化鸡肉, 对她的大脑和神经系统的好处. 即便是全替换的机械人仍然需要机械血液里面的纳米机器人以外的物质维持生命. 这一切都很好的, 但是这些都不是巧克力, 差得远了.
+They stared at each other for a long moment, then they both burst out laughing. He was still chuckling a little while he expounded on corn, potatoes, green beans and chicken, whichi was actually fortified chicken product, and how each food would benefit her brain and central nervous system because even Total Replacement cyborgs did not live by the nanos in cyber-blood alone. It was all pretty good, but none of it was chocolate. Not even close.
+</p>
+
+
+
+
+<hr  />
+
+
+
+<p>
+依德要求阿丽塔上床睡觉, 阿丽塔立马照办了, 并且打了一个大大的哈欠, 看上去眼皮就架不住了. 但是这只是演戏, 她可清醒着呢, 当她听到走廊传来嘎吱嘎吱的响声的时候, 她已经准备好了. 她打算倒数三十下再跟出去, 这样就能减少被发现的几率; 但是她还没数到二十下就急不可耐的追了出去; 阿丽塔认为, 弄丢他的行踪可比被发现更糟糕.
+Alita went to bed as soon as Ido told her to, making a big show of yawning and looking like she could barely keep her eyes open, but a show was all it was. She was wide awake when she heard the squeak-squeak-squeak in the hall, and she was ready. She fully intended to count to thirty before she followed him out of the house so there would be less chance of his catching her but she barely made it to twenty; losing him, she decided, would be worse.
+</p>
+
+<p>
+幸运的是, 行李箱拖累了他的速度. 行李箱不是很大, 但是在粗糙的路面上很难操控. 它看上去也比想象中的要重. 他不断转换姿势, 将行李箱拖起来, 两个轮子着地, 这样他就能够在路沿和人行道上坏了的路段拖着走. 在街上尾行他, 阿丽塔必须压着速度, 甚至有可能会跟丢他.
+Fortunately, the suitcase slowed him down. It wasn't very big but it was awkward on rough pavement. It was also heavier than she'd thought. He kept having to turn around and tip it onto two wheels so he could drag it over kerbs and broken sections of pavement. Following him on the street, she had to hang back so much there was a very real chance she'd lose him.
+</p>
+
+<p>
+但是这里有一个好办法, 她可以在保持距离的情况下跟得更紧 &#x2014; 这都要感谢雨果. 她爬上去的建筑上的手足的附着点没有雨果的那间老教堂多, 但是它只有两层楼高, 并且有很多窗沿和管道. 阿丽塔在一栋房子的屋顶毫不费力地跳到另一栋建筑的屋顶上, 由此得以跟上他的速度. 有时候她甚至可以走在依德的前面, 停下来看他会选择那一条路, 左转, 右转亦或是直行.
+But there <i>was</i> a way she could put more distance between them and still stay close &#x2014; and she had Hugo to thank for it. The building she scaled didn't have quite as many hand- and toe-holds as Hugo's cathedral, but it did have windowsills and pipes and it was only two storeys tall. She was able to keep pace with him, leaping the gaps between one roottop and another with no trouble. Sometimes she could even move ahead of him and wait to see which street he would choose, whether he would go left or right or straight on.
+</p>
+
+<p>
+这就是她看见那个女人的原因. 阿丽塔只看到这个女人有一双非常有型的腿, 一条几厘米长的短裙; 她的身体的其他部分都隐藏在连帽的夹克下面. 一开始阿丽塔以为她只是夜出后, 找不到出租车, 只得步行回家. 但是这个女人走路速度很快 &#x2014; 当她的高跟鞋响亮地踩在人行道上, 阿丽塔只需要听一下就知道这女人的方位 &#x2014; 她一点也不急.
+This was how she spotted the woman. All she could really see of her was a pair of very shapely lges and a few centimetres of very short skirt; the rest of her was hidden under a hooded jacket. At first Alita thought she was merely on her way home after a night out and hadn't been able to find a cab. But while the woman was walking at a good pace &#x2014; herhigh heels clicked so loudly on the pavement, Alita kknew where she was just by listenning &#x2014; she was in no hurry.
+</p>
+
+<p>
+她看上去在绕路回家; 阿丽塔看到这个女人走在街上, 一直在转弯. 她走丢了吗? 如果是的话, 看上去不像呀! 她既不停下来看门牌号, 也不费工夫四处张望, 寻找方向. 她就是在不停地走, 不停地走, 走. 她走路的方式看上去像是准确知道自己的路线的人.
+She also seemed to be taking a very roundabout way home; she saw that the woman walked along streets without making much progress in any one direction. Was she lost? If so, she didn't act lost. She didn't stop to peer at building numbers, she never stopped to look around or get her bearings. She just kept walking and walking and walking, the way people did when they knew exactly where they were going.
+</p>
+
+<p>
+依德也是如此. 阿丽塔利用她在空中的海拔优势看到他的路线跟这个女人的路线竟然有些关联. 有时候他甚至离这个女人不到一个街区的距离, 阿丽塔知道他一定能听到高跟鞋踩在人行道上的声音 <i>哒-哒-哒</i> . 但是他一直保持不出现在这个女人的视野内 &#x2014;
+And so did Ido. Alita saw from her elevated vantage point that the route he took was somehow connected to the woman's. Sometimes he got to within a block of her and Alita knew he must have been able to hear those high heels going <i>tik-tik-tik</i> on the pavement. But he never got within sight of her &#x2014;
+</p>
+
+<p>
+她打了个冷战, 意识到: 依德正在尾行这个带兜帽的女人.
+Ido, she realised with cold horror, was <i>stalking</i> the woman in the hood.
+</p>
+
+<p>
+不, 不会是他, 不是依德, 不可能是他.
+No, he couldn't be. Not Ido. He wouldn't.
+</p>
+
+<p>
+这个女人走进了一条狭窄的通道, 往下走了几级水泥阶梯, 停了几秒, 回头看. 依德并不在哪里. 他选择了另外一条街区, 停在了墙角. 阿丽塔屏住呼吸. 女人走下楼梯, 距离依德不到一个街区, 并且笔直地朝着依德走去.
+The woman entered a narrow passageway and went down a flight of cement stairs, pausing for a moment to look behind her. Ido wasn't there. He had gone down a different street and stoppped on a corner. Alita held her breath. The woman came down the stairs barely a block up from Ido and was now walking straight towards him.
+</p>
+
+<p>
+依德知道这一点.
+And Ido knew it.
+</p>
+
+<p>
+他打开他的箱子, 拿出了一些金属棒, 其中一个棒子有一个奇怪的头 &#x2014; 一边像是锤子, 另一边是看上去致命的圆形尖. 从阿丽塔的优势视角看过去, 很难看明白这个东西究竟是做什么的. 阿丽塔跳到另一个稍微矮一点的屋顶. 她想要保持安静但是着陆的时候还是发出了一些声音.
+He opened his case and took out some metal rods, one of which had a weird head on it &#x2014; one side looked like a hammer, the other came to a deadly-looking rounded point. From her vantage point above and behind him, it was hard to see exactly what the thing was. Alita leaped to the next roof, which was a little bit lower. She tried to be silent but she made a small scraping sound when she landed.
+</p>
+
+<p>
+她停住不动, 屏住呼吸, 等着依德大喊, 但是他并没有. 最终她翻过屋顶边上的矮砖墙, 向下看. 他正在专心致志地组装那件锤子样式的武器, 没有听到任何声音 &#x2014; 除了那个女人的高跟鞋的声音 <i>哒-哒-哒</i>. 他将配件组装完成, 打开开关. 这个锤子在他手里仿佛有了生命一般, 阿丽塔知道他将用这个来对付那个带兜帽的女人. 感觉到心仿佛碎成了千片, 阿丽塔越过屋顶, 跳下两层楼落在依德面前.
+She froze, holding her breath, waiting for Ido to call out, but he didn't. Finally, she crept over the low brick wall at the edge of the roof and peeked down at him. He was apparently too absorbed in putting that hammer weapon together, he didn't hear anything &#x2014; except the <i>click-click-click</i> of that woman's high heels. He fitted the pieces together and flipped a switch. The thing came alive in his hands and Alita knew he was going to use it on the hooded woman. Feeling as if her heart had shattered into a million pieces, she leaped down two storeys and landed in front of him.
+</p>
+
+<p>
+"不! 停下来!" 她用两只手抓住锤子武器的柄.
+"No! Stop!" She grabbed the shaft of the hammer weapon with both hands.
+</p>
+
+<p>
+依德的下巴都惊掉了. "阿丽塔?! 干什么 &#x2014;"
+Ido's jaw dropped. "Alita?! What &#x2014;"
+</p>
+
+<p>
+"我不会让你杀了她的!" 她大声说道, 并试图将锤子武器从他手上抢过来. 她转过头来看那个女人, 但是那个女人已经不见了. 整条街上除了她和依德, 再无其他人.
+"I'm not going to let you kill her!" she shouted, tring to pull the hammer away from him. She turned to look at the woman but she was gone. There was no one on the street except her and Ido.
+</p>
+
+<p>
+接着她听到一个低声沉闷的笑声, 回响在这如迷宫一样环绕着他们的狭窄的街道上, 正是那女人之前走过的街道. 围绕着他们的阴影看上去凝成了一个, 朝他们移动过来, 膨胀成一个三米高的侧影.
+In the next movement, she heard a low, rumbling laugh echoing through the labyrinth of narrow alleys around them, the alleys the woman had been walking through. The shadows around them seemed to shift as one, moving towards them and swelling into a silhouette three metres tall.
+</p>
+
+<p>
+阿丽塔听到一声长长的讨厌的刮擦的声音在她和依德的背后的街道上响起. 他们转过身去看到了第二个机械人, 一个痞里痞气的金属骨架, 脑袋顶长着一绺紫白相间的毛, 脸上挂着骷髅般的微笑, 手拿一把刀.
+Alita heard a long, nasty scraping sound on the street behind her and Ido. They turned to see a second cyborg, a gangly metal skeleton with a tuft of purple-and white hair and a death's-head grin, holding a blade in one hand.
+</p>
+
+<p>
+"这是一个陷阱," 依德说, 他的声音出奇的平静.
+"A trap," Ido said, his voice absurdly matter-of-fact.
+</p>
+
+<p>
+"在找我吗? 医生?" 八英尺高的影音说. "或者我该叫你 <i>猎人勇士</i> ?"
+"Looking for me, Doctor?" said the eight-foot shadow. "Or should I say <i>Hunter-Warrior</i> ?"
+</p>
+
+<p>
+阿丽塔张大了嘴惊讶地看着依德. 依德医生, 那个忙碌了几天的机械手术师, 将她的核心放到这具艺术品一般的身体里面, 居然是一个猎人勇士? 这当中一定有什么误会 &#x2014;
+Alita gaped at Ido. Dr Ido, the cyber-surgeon who had laboured for days to embed her core in this work-of-art body, a Hunter-Warrior? There had to be some mistake &#x2014;
+</p>
+
+<p>
+"噢, 不!" 那具骨架说, 做出一副假装害怕而战栗的样子. "看上去他发现我们了! 好怕怕!"
+"Oh, no!" said the skeleton, shuddering in fake terror. "Looks like he's got us now! I'm so scared!"
+</p>
+
+<p>
+依德站出身来挡在阿丽塔前面. "阿丽塔, 不要动," 他嘱咐阿丽塔说到.
+Ido stepped in front of Alita protectively. "Alita, don't move," he told her.
+</p>
+
+<p>
+"多谢你带了一个女孩儿过来," 这具骨架这样说, 顺手用手中的刀硎过他的肋骨, 擦出火花. "那会省下我们不少时间!"
+"Thanks for bringing a girl," said the skeleton, and he clanged his balde against his ribs, making sparks. "That's gonna save us time."
+</p>
+
+<p>
+依德和 "骨架" 互相朝对方冲锋. 阿丽塔退了几步, 听见锤子呼啸而过的声音. 蓝色的火焰从锤子头后面冒出来, 砸到骨架的前臂上, 把前臂撕裂开来. 前臂掉在地上发出响亮的撞击声, "骨架" 颤抖着退后了几步, 大笑.
+Ido and the skeleton charged each other. Alita stepped back, hearing the hammer roar. Blue flame burst from the back of the hammer's head as it slammed into the skeleton's forearm and tore it off. It clattered loudly on the street and the skeleton staggered backwards, laughing.
+</p>
+
+<p>
+"打得不错! 对个胖小子来说" 他嘲讽道
+"Nice shot for a meatboy!" he jeered.
+</p>
+
+<p>
+依德又朝他挥了一次锤子, "骨架" 侧步躲开了, 锤子凿下一块水泥墙面. "骨架" 大笑, 用手里弯曲的利刃扫过依德的肩膀. 让阿丽塔恐惧的是, 依德流着血颤抖地退了几步, 手里的锤子脱手翻了出去.
+Ido swung at him again, but the skeleton side-stepped and the hammer took a chunk out of a concrete wall. The skeleton laughed and swiped at Ido's shoulder with his curved blade. To Alita's horror, the hammer cartwheeled out of Ido's hands as he staggered back, bleeding.
+</p>
+
+<p>
+"不!" 阿丽塔大叫.
+"Nooo!" Alita screamed.
+</p>
+
+<p>
+依德低下身去够锤子, 但是一条勾勾又丢丢的腿踩着高跟鞋按在了锤子柄上面, 一把黑色的长刃抵在了他的脖子上. 阿丽塔认为依德要去杀的那个女人朝他俯下身去, 把她精心化妆过的脸靠近他.
+Ido dived for the hammer but a shapely leg with a spike heel slammed down on the handle, and a long black blade appeared at his throat. The woman Alita hand thought Ido was going to kill crouched over him, putting her carefully made-up face close to his.
+</p>
+
+<p>
+"你是来拯救我的吗?" 她说. "太感动了!" 她用刀把他的眼睛挑走. "我说, 你的眼睛可真好看!"
+"Did you come to rescure me?" she said. "That's so sweet!" She used the blade to flick his glasses away. "Say, you have nice eyes."
+</p>
+
+<p>
+"他是我的!" "骨架" 大声说道, 手抓住他那条断掉的胳膊. "那个女孩儿是你的."
+"He's mine!" yelled the skeleton, clutching his mangled arm. "You can have the girl."
+</p>
+
+<p>
+阿丽塔后退了一步, 然后又退了一步, 朝着背后的巷子走得更远了.
+Alita took a step back and then another, moving farther down the alley behind her.
+</p>
+
+<p>
+"我不在乎, 只要我能够拿到他的眼睛," 那女人一边这么说, 一边用她弯曲的黑色长刃触摸依德的脸颊.
+"I don't care, so long as I get his eyes," said the woman, touching the tip of her curved black blade to Ido's cheek.
+</p>
+
+<p>
+其余两个机械人靠近依德, "骨架" 抓住依德的头发把他扬起.<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>
+The other two closed in on Ido, and the skeleton yanked him up by his hair.
+</p>
+
+<p>
+依德紧闭他的眼睛. "阿丽塔, 快跑!" 他大声吼道.
+Ido squeezed his eyes shut. "Alita, run!" he yelled.
+</p>
+
+<p>
+阿丽塔跑了 &#x2014;
+Alita run &#x2014;
+</p>
+
+<p>
+&#x2014; 她的脚又急促, 又用力地捶打地面, 她越来越快, 越来越快, 越来越快, 然后腾空而起. 一阵响亮的金属撞击声爆发, 随着她砸到"骨架"身上, 将他从依德的身上踢翻在地上. 她保持骑乘位, 拳头如此地快以至于很难看清他的动作. 直到地上只剩下一堆扭曲的金属废品.
+&#x2014; flat out, hard and fast, her feet pounding the pavement as she made herself go faster, faster, faster, then launched herself into the air. There was a loud metal clang! as she slammed into the skeleton and send him tumbling away from Ido. She stayed on him, her fists moving almost too fast to follow until there was only a pile of twisted metal junk on the street.
+</p>
+
+<p>
+依德难以置信地望着阿丽塔和地上她创造的残骸. "我的天," 他舒了一口气. "阿丽塔&#x2026;?"
+Ido stared at Alita and the wreckage she had created in disbelief. "My God," he breathed. "Alita&#x2026;?"
+</p>
+
+<p>
+巨人从阴影中走出来, 发出愤怒的吼叫. 他有着近乎不可能地宽的肌肉型肩膀, 厚实的手臂双手过膝. 脑袋大如斗, 耳垂垂过肩, 身体像是用一块水箱敲打塑造成人形.
+The giant stepped all the way out of the shadows with a roar of anger. He had impossibly broad, muscular shoulders and thick arms that hung too low, a head the size of a barrel, and a body that looked like a tank that had been hammered into a shape that was supposed to be humanoid.
+</p>
+
+<p>
+"捏死那只跳蚤!" 他指着阿丽塔怒吼道.
+"Rip that flea!" he bellowed, pointing at Alita.
+</p>
+
+<p>
+另外一个机械人开始行动, 她扔掉她的兜帽夹克, 阿丽塔看见他的脸和她勾勾又丢丢的大腿是她身上仅剩的人类的特征. 从腰线往上她的黑色闪着金属光泽的身体就像昆虫一样分节. 她伸开她的胳膊, 露出上面三个如同螳螂一样的关节, 关节末端是令人厌恶的弯曲的利刃.
+The other cyborg came to life, throwing off her hooded jacket, and Alita saw that her face and her shapely legs had been her only human features. From the waist up, her shiny black metal body was segmented like an insect. She extended her arms, showing off triple joints like those of a praying mantis and the nasty curved blades on the end of each one.
+</p>
+
+<p>
+"你真漂亮," 她称赞阿丽塔. "我想要把你切开, 看看你里面是否跟其他人一样丑陋."
+"You're so beautiful," she gushed at Alita. "I want to rip you open and see if you're ugly inside, like all the others."
+</p>
+
+<p>
+在这个城市里, 邪恶真的能够找到它自己的存在的形式, 阿丽塔这样想到, 然后跃向她.
+Evil certainly could find its form in this city, Alita thought and then leaped at her.
+</p>
+
+
+
+
+<hr  />
+
+
+
+<p>
+依德摆脱了让他愣在原地的令人震惊难以置信的事实. 他的姑娘需要他 &#x2014;
+Ido shook off the shocked incredulity that had frozen him in place. His little girl needed him &#x2014;
+</p>
+
+<p>
+或者不需要?
+Or did she?
+</p>
+
+<p>
+随着"昆虫"的黑弯刀切开空气, 阿丽塔如同没有重力般, 毫不费力地跳开了. 她从路边的柱子上反弹开, 冲向那个机械人. 依德俯下身子去捡他的锤子, 启动, 往后拉, 准备挥击 &#x2014;
+As the insectoid's curved black blade sliced through the air, Alita jumped clear effortlessly as if she were levitating. She rebounded off one of the old causeway pillars and sparng back towards the cyborg. Ido dived for his hammer, started it up, drew back for a swing &#x2014;
+</p>
+
+<p>
+结果他发现自己手上空了. 八尺怪人一只手拿着锤子, 一只手掐着依德的脖子, 将他钉在了墙上, 转过他的头, 强迫他看着阿丽塔.
+Only to find his hands empty. The eight-foot monster took the hammer in one hand and Ido by the neck with the other. It pinned him aagainst a wall, turning his head, forcing him to look at Alita.
+</p>
+
+<p>
+"看着她死!", 机械人要求道.
+"Watch her die," the cyborg commanded him.
+</p>
+
+
+
+
+<hr  />
+
+
+
+<p>
+昆虫杀手的疯狂全面爆发出来, 她用她那令人厌恶的黑色弯刀砍向阿丽塔. 阿丽塔躲过了每一次攻击, 步伐逐步逼近直到她足够近, 一个踢法直接就将昆虫杀手踢飞了, 将她扇到了背后的墙上. 就在彻底把她踹到墙里面去的时候, 昆虫杀手扭动她的身体, 以令人惊讶的轻松用脚踢墙, 身体上下颠倒而没有受伤, 躲过了致命一击. 她笑着吊在那片刻, 然后冲向阿丽塔.
+The insectoid's homicidal madness was in full bloom as she slashed at Alita with her nasty black blades. Alita evaded every swing, gradually moving nearer until she was close enough for a powerful kick that sent the insectoid flying backwards to slam into the wall behind her. But just before smashing into it, the insctoid twisted her body with a sudden frightening ease and hit the wall on her feet, upside down and unhert. Grinning, she clung there for a second, then sprang at Alita.
+</p>
+
+<p>
+阿丽塔已经发功. 在半空中与昆虫人短兵相接, 随着医生金属撞击的声音, 阿丽塔再一次把昆虫人订到了墙上. 如同一个舞者一样连贯的动作, 阿丽塔转动她的身体, 用脚尖指向昆虫人的脑袋, 将它按在墙上重击. 分节的身体无头地滑到了地上, 蓝色的机械血液从她被毁坏的脖子喷涌而出, 就像喷泉一样. 阿丽塔向后空翻, 弓着身子落在地面上, 面上八尺巨人.
+Alita was already in motion. She met the insectoid in mid-air with a crash of metal, ramming her into the wall again. Moving with the fluid grace of a dancer, Alita turned her body, pointed her toes at the insectoid's skull, and drove it against the stone. The segmented body slid down to the ground, headless, blue cyber-blood gushing out of its ruined neck like a fountain. Alita somersaulted backwards and dropped into a crouch facing the eight-foot cyborg.
+</p>
+
+<p>
+怪物放下依德, 冲着她笑, 露出如同刀子一样闪着金属寒芒的牙齿.
+The monster droppped Ido and smiled at her, showing gleaming metal teeth like knives.
+</p>
+
+<p>
+"过来, 小跳蚤." 他举起他一只巨大的手, 将食指和拇指挤在一起: <i>哒-哒-哒</i> "过来, 我要把你的脑袋碾碎."
+"Come here, little flea." He raise one massive hand and pressed his forefinger and thumb together: Tick! Tick! Tick! "Come here so I can pinch your head off."
+</p>
+
+<p>
+阿丽塔冲向他, 他的手臂重重地撞向水泥墙上, 动作是如此的用力甚至可以撼动他整个身体. 阿丽塔轻松躲过他的手臂, 穿到他的身后, 立马直起身来准备下一步的动作. 就当她跳过他的头顶的时候, 他伸手去拍阿丽塔, 将她往回推向 &#x2014;
+Alita sprang at him, easily dodging his arm, which smashed into a concrete barrier hard enough to make his whole body shake. She came down behind him and immediately launched herself straight up to make her next move. But just as she rose past his head, he reached up and swatted her, sending her backwards into &#x2014;
+</p>
+
+<p>
+一阵炫目的白光.
+A sudden bliding flare of light.
+</p>
+
+<p>
+时间禁止了.
+Time stopped.
+</p>
+
+
+
+
+<hr  />
+
+
+
+<p>
+阿丽塔发现自己正在注视荒凉的黑白相间的地貌, 静止的星星点缀的黑色天空下<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>是毫无生机的岩石和灰尘. 时间再次启动, 但是流逝得非常缓慢, 随着她迫降到这片了无生机, 尘土灰暗的地面上. 她的身体有点不同, 护甲更严实. 这是一具为危险和格斗准备的身体, 虽然她不知道她为什么了解这一点, 就像她同样不知道为什么数字 99 涂在她肩膀上. 她所知道的仅仅是她已经准备好了.
+Alita found herself looking down at a stark black-and-white landscape, lifeless rock and dust under a black sky filled with unblicking stars. <sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> Time started again, but it moved at a crawl now as she drifted down towards the lifeless, dusty surface. Her body was different, much more heavily armoured. This was a body meant for danger, for combat, although she didn't know how she knew that , any more than she knew why the number 99 was printed on her shoulder. Shel only knew she was ready.
+</p>
+
+<p>
+她的影子正对着她, 漂浮在她的下面. 她时刻保持警惕, 敌军在一阵喷发的古旧的尘土中发现了她的影子. 时间立马切换到了正常的速度, 她在死寂的地面弹跳了几次, 冲着一对整装待发的敌军的战士冲锋. 她知道她的敌人已经和她一样已经准备好了.
+Her shadow was floating down in front of her. She pointed her toes and they met her shadow in a burst of ancient dust. Immediately, time shifted in to normal speed and she was bounding over the dead landscape, chargin towards a squad of enemy soldiers also in combat armour. She knew they were as ready as she was.
+</p>
+
+<p>
+阿丽塔立马采取行动, 化身一阵致命的拳脚风暴. 她的动作并不狂热, 相反十分有纪律, 她拥有与生俱来, 至死追随的武术, 也正是这武术让她在战争中活下来. 每一个突进企图杀死她的敌方士兵都死在了她的手里; 每次敌人的阵亡就是另外的一步推进. 必须让她保持推进, 阻止她对于任何人来说都是快速死亡.
+ALITA exploded into action, becoming a lethal storm of blows and kicks, her movements not frezied but disciplined, born of the martial art that she lived to follow and that now kept her alive. Each enemy soldier that advanced to kill her died at her hands instead; each death was another move forward.She had to keep moving forward, too fast and too deadly for anyone to stop her.
+</p>
+
+<p>
+一个接着一个, 敌军士兵靠近她, 朝她突进, 然后被她解决掉, 拗断他们的身体, 撕裂成两半. 她回过头去看那个她每天都能看到的, 现在正在和她并肩作战的人, 这人如此的凶猛, 无惧, 无情: 这人就是盖尔达, 她的小队长.
+One after another, the enemy soldiers reached for her, lunged at her, then fell away from her as she took them out, twisting their bodies, tearing them apart. Fighting her way through them, she turned to look at the person fighting by her side was one she saw every day, fierce and unafraid and unrelenting: Gelda, her squad leader.
+</p>
+
+<p>
+突然一道耀眼的白光闪过, 所有的东西都变成了白色. 她听到盖尔达大声呼喊, "敌军正在靠近!" 白色淡出视线, 阿丽塔朝上看到战舰在黑色的天空高飞, 发射导弹和能量束, 而静止不动的星星无声沉默地看着这一切.
+There was a sudden brilliant flash overhead and everything went white. She heard Gelda yell, "Incoming!" The white faded out and Alita looked up to see warships soaring through the black sky, firing missiles and energy beams while the unblinking stars looked on in silence.
+</p>
+
+<p>
+敌军指挥中心已经出现在视野中. 阿丽塔振作精神, 继续往前跳. 盖尔达看着她的轨迹, 心中涌起一股战士的骄傲.
+The enemy command centre was in sight. Alita gathered herself and leaped again. Gelda watched her trajectory with a warrior's pride.
+</p>
+
+<p>
+"你会是最厉害的!" 盖尔达朝她吼. "有史以来最厉害的 &#x2014; 不管是在我们的历史中, 还是在他们的历史中!"
+"You're going to be the best!" Gelda called to her. "The best the world has ever seen &#x2014; ours or theirs!"
+</p>
+
+<p>
+她在虚空之中快速飞行穿越, 看到地球悬挂在没有空气的黑色的天空中, 紧接着耀眼的白光再次一闪而过. 战场已经不见了, 一堵石墙朝她冲过来.
+She was flying through the void, saw the Earth hanging in the airless black before the bliding light flared again. The battle was gone and there was a stone wall rushing at her.
+</p>
+
+
+
+
+<hr  />
+
+
+
+<p>
+战斗的记忆弥漫在她的身体中, 与之而来的是让她可以不经思考地做出动作的知识和熟稔. 她看到自己站在墙上, 并且稳住, 而不是被砸进这堵墙. 他们又回到了人行道上. 这条路曲折蜿蜒向远方辽阔的地面, 与已经废弃, 不复存在的高速公路的匝道连接在一起. 再远的地方就是一片黑暗, 即使是路灯也无法点亮的黑暗. 阿丽塔牢牢地抓住墙沿, 看着怪物般的机械人朝她冲过来, 在这个怪物身后, 依德的目光与她的目光交汇到一起; 然后依德也望向了这只机械怪人.
+The memory of combat suffused her body with knowledge and expertise that let her move without thinking. She caught herself on the top of the wall instead of smashing into it and held on. They were at the causeway now, where the road curved out over empty space to meet connections from high ramps that no longer existed. Beyond it was a darkness unbroken even by the streetlights. Alita took a firmer grip on the wall, watching the monster cyborg advance on her. Behind him, Ido's gaze met hers; then he was running at the cyborg.
+</p>
+
+<p>
+这怪物回头随手将依德打飞了, 阿丽塔这时弯曲她的膝盖, 将她自己对准这怪物肩膀和手臂的连接处, 并发出一声战吼. 这战吼从她内心深处发出, 即使她的心灵已经忘记, 但是她的身体<sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>没有. 她砸到这怪物的肩峰<sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>上, 然后击中之后猛地一扭 &#x2014; 另外一个她身体记得的动作. 一阵金属的尖啸声音穿过, 紧着着被这个机械人的愤怒和难以置信的狂吼吞没, 他的胳膊掉到了地上, 机械血洒满了人行道.
+As the monaster turned to knock him away, Alita bent her knees and aimed herself at the place where his arm met his shoulder, letting out a war cry that came from a place her body remembered even if her mind didn't. She rammed into the cyborg's shoulder feet first, adding a sharp twist just as she hit &#x2014; another move her body remembered. There was a scream of metal, drowned out by the cyborg's bellow of anger and disbelief as his arm droppped to the ground, splashing cyber-blood on the pavement.
+</p>
+
+<p>
+阿丽塔蜷曲身体往前翻, 当他朝她冲过来的时候, 她已经站了起来, 并且手上的锤子已经准备就绪.
+Alita tucked and rolled away, bouncing to her feet with the rocket hammer at the ready when he lunged for her.
+</p>
+
+<p>
+"你是谁?" 他咆哮道
+"Who are you?" he roared.
+</p>
+
+<p>
+作为回应, 她把锤子锤进他的胸口.
+In answer, she slammed the hammer into his chest.
+</p>
+
+<p>
+有什么了不得的东西碎裂开了, 传出一声巨大的声响, 有些本该是无敌的存在, 遇到了它难以匹敌的对手, 这对手击碎的不仅是它的物质, 更是这物质背后的精神. 阿丽塔看着这机械人身体上扩散的裂痕, 有那么一刻, 她认为眼前的怪物会在自己面前化成渣渣. 但是他用他残存的手臂将自己拉住, 不让身体散架, 摇晃着往后退. 依德吃惊地像是要休克一般, 但是他目前是安全的. 阿丽塔举起锤子向机械人进攻, 打算终结掉他.
+There was the loud crack! of something enormous breaking apart, something that should have been invicible but had met a force that it could not stand against, a force that had shattered not just its material but the faith behind it. Alita watched as lines of breakage spread over the front of the cyborg's body and , for a moment, she thought the monster might actually fall to pieces in front of her. But he used his remaining arm to hold himself together as he staggered backwards. Ido was gaping like a man going into shock, but he was safe. ALita hefted the hammer and advanced on the cyborg, intending to finish him off.
+</p>
+
+<p>
+"你会为此付出代价的, 小跳蚤," 他急吁吁地说, 一边后退远离她. "格鲁依什卡永不忘记! 我会回来找你们的, &#x2014; 你们俩!"
+"You'll pay for this, little flea," he rasped, backing away from her. "Grewishka does not forget! I'll be coming for you &#x2014; both of you!"
+</p>
+
+<p>
+赶在阿丽塔抽回锤子再挥一下之前, 他向下跳下人行道. 阿丽塔冲到路障前往下看, 但是除了黑暗之外什么也看不到.
+Before she could draw back for another swing, he toppled backwards over the side of the causeway, Alita ran to the barrier and looked down but couldn't see anything in the darkness below.
+</p>
+
+<p>
+"阿丽塔, 你还好吗?" 依德问到, 他的声音又尖又充满了恐惧. "阿丽塔?"
+"Alita, are you all right?" asked Ido, his voice high and fearful. "Alita?"
+</p>
+
+<p>
+"再给我一秒," 她怒吼道, 看着下面的黑暗. "再给我一秒, 他就是我的了."
+"Another second," she growled, looking down into the darkness. "Another second and he would have been mine."
+</p>
+
+<p>
+她抬起她的头, 突然感受到一阵冷风吹过她的脸. 没有能够终结她的敌人的沮丧和失望瞬间从她身上消失的无影无踪, 只留下身体轻飘飘的感觉, 那是太过于暴力的方式过度使用物理机能导致的. 在战斗条件下, 这样的身体初次发挥出的基线水平不算太差.
+She raise her head and suddenly felt cool night air blowing into her face. the frustration and disappointment of not being able to finish her enemy drained out of her, leaving her with the feel of bodily lighness that came after expending so much physical energy in an extremely forceful way. It wasn't so much a letdown as a return to a base level that, under battle conditions, didn't even exist.
+</p>
+
+<p>
+"阿丽塔, 你能听见我吗?"
+"Alita, Can you hear me?"
+</p>
+
+<p>
+她朝依德眨了眨眼睛, 看着献血从他脸上留下来 &#x2014; 心血. "天哪, 依德!" 她说到, 她显然对他受伤这个事实感到很恐惧. "你还好吗?"
+She blinked up at Ido, at the blood trickling down his face &#x2014; heart's-blood. "Oh my God, Ido!" she said, horrified that he was injured. "Are you all right?"
+</p>
+
+<p>
+依德看着她, 她不明白依德是疯了还是太伤心, 吓坏了或者困惑. 她想, 也许看到了她用这身体所做的一切, 依德会很后悔他让阿丽塔装上了这个身体; 或许他希望在垃圾堆捡到她的核心的时候, 依德把她丢在那儿了.
+He stared down at her and she couldn't tell if he were mad or sad, scared or confused. Maybe after seeing what she had done with this body, he was sorry he'd put her in it, she thought; maybe he wished that when he'd found her core in the trash pile, he'd left it there.
+</p>
+
+<p>
+突然他转过身来, 将阿丽塔拉向他.
+Abruptly he turned away, pulling her with him.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+这个小小的, 看上去如此像他的女儿的杀人机器静静地陪着他走在在夜色的街道上, 在她身上没有任何攻倾或者是暴力行为, 甚至连青少年的坏脾气都没有哪怕一点儿. 格鲁依什卡已经掉下了堤道的边缘, 阿丽塔也恢复成了那个年轻的女孩儿, 担心依德的伤口, 一心只想回家.
+The little killing machine that looked so much like his daughter walked quietly along the night-time streets beside him. There was no sign of aggression or belligerence, not event a little adolescent bad temper.Since Grewishka's long fall off the edge of the causeway, she had reverted to being only a young girl, worried that he was hurt, wanting nothing more than go home.
+</p>
+
+<p>
+或者更准确地说, 大约格鲁依什卡掉下去半分钟, 当她瞪大眼睛怒视深渊, 咆哮着说只要多一秒种就能干掉格鲁依什卡的时候, 仿佛她才是这里的勇士.
+Or more precisely, since about half a minute after Grewishka had fallen, when she'd glared down into the shadows and growled about how a second longer and he'd have been hers. As if she were the Warrrior around here.
+</p>
+
+<p>
+依德现在明白了, 她确实是勇士. 他看到了阿丽塔身上的这种潜质, 她身上漂亮的花纹, 身上漂亮的金色和银色的镶边, 不会也不能改变这一事实. 也许依德可以尝试控制这一切, 通过做一个好父亲, 保护阿丽塔远离危险, 来使得她的战士天赋休眠. 不过他又一次失败了, 而且这次失败闹出来的动静比第一次还要大.
+Which, he understood now, she was. He had seen it in her, and all the pretty flower designs and silver and gold inlays on her pretty body wouldn't, couldn't, change that. Perhaps he could try to keep it at bay, keep it dormant by being a good father and keeping her out of danger, something he had once again failed to do, and in an even more spectacular way than the first time.
+</p>
+
+<p>
+当他们回家的时候, 阿丽塔坚持要替依德包扎伤口, 依德只得让她这么做. 在她准备纱布, 清理依德的伤口的时候, 阿丽塔看起来非常懊悔. 这个十四岁的小女孩尝试弥补她不听话的过错: 偷偷溜出去, 将自己置身危险之中 &#x2014;
+When they got home, she insisted on bandaging his shoulder and he let her. She looked so contrite as she preapred the dressing and cleaned his wound. The fourteen-year-old girl trying to make up for disobeying him, for sneaking out, and putting herself in the middle of a bad situation &#x2014;
+</p>
+
+<p>
+<i>不过如果她没有这么做的话, 我可能已经死了.</i> 依德这么闷闷不乐地提醒自己. 现在阿丽塔包扎伤口做得很好, 用了刚好足量的软膏平整地闭合了伤口, 没有肿块. 依德很好奇, 这到底是她从格哈德哪里学来的, 还是她战士天赋里面的战场急救知识呢?
+Except if she hadn't, I'd be dead, he reminded himself unhappily. And now she was doing a superb job with his shoulder, using just enough paste to close the laceration smoothly, without lumps. He wondered if this was something she learned from Gerhad or whether it was actually battlefield first-aid that came with her Warrior nature.
+</p>
+
+<p>
+但是今夜还没有结束 &#x2014; 依德仍然要将赏金标的送到工厂去. 他既不想带着阿丽塔一起去, 以免会出些什么其他的岔子, 又激活了她的战斗本性; 他也不想把阿丽塔独自留在家中, 在发生了这一系列事情之后. 她需要一个人聊天, 需要有一个人陪着她, 免得她一个人想这些事情. 若真是将她一个人留在家里, 保不齐她又会溜出来盯他的梢. 或者那两个她杀了的机械人的朋友可能过来寻仇, 如果他们破门而入 &#x2014;
+But the night wasn't over yet &#x2014; he still had to deliver the bounties to the Factory. While he didn't really want to take Alita with him in case something else happpened that would flip her into full-on combat, he didn't want to leave her home alone, not after everything that had happened.She needed him to talk to, to be with her so she wouldn't have to think about it all by herself. And that was leaving aside the possibility of her sneaking out and following him again if he didn't. Or the possibility that friends of the two cyborgs they'd killed might come looking for payback. If some of them broke in &#x2014;
+</p>
+
+<p>
+他在这个想法上按下了暂停键, 收起了这个想法. 机械人寻仇这不太可能, 考虑到依德对于钢铁城的机械人的地位, 但是这也不是完全不可能.
+He clamped down on the thought and shut it off. It wasn't very likely, given who he was to the Iron City cyborgs, but it wasn't totally out of the question.
+</p>
+
+<p>
+他决定要带上阿丽塔跟他一起去工厂. 就这么决定了. 没有必要花时间在这上面纠结.
+He decided to take Alita with him to the Factory. Case closed. No agonising necessary.
+</p>
+
+<p>
+在他们除法前往工厂之前, 他偷偷瞟了阿丽塔一眼. 她仍然表现得很安静, 看上去很懊悔, <i>(后面这一段不译, 写得太烂)</i>
+He sneaked a sidelong glance at her as they headed for the Factory. She was still quiet, still looking contrite, like any other young teenage girl who had defied a parent and found herself in the middle of a situation far more serious than she'd imageined. And now she was probably wondering how much trouble she was in, how angry he was, how he was going to punish her, and would things ever be the same between them.
+</p>
+
+<p>
+Are you sure about that? asked a tiny voice in his mind. Seeing as how she saved your ass, could you be projecting? Is she really the only one here with something to apologise for? Yres, she thought you were the killer &#x2014; but if she hadn't, Grewishka would have your head on a pike and the bug would be wearing your eyes as earrings.
+</p>
+
+<p>
+Alita &#x2014; this Alita &#x2014; had been in his life for a grand total of two days, not fourteen years. She wasn't really a young girl, not the way his daughter had been. His daughter had been defenceless, needing his protection. This Alita needed no protection. She might be worried about how angry he was with her, but maybe he should consider about how angry she was with him. Because he'd seen what happened when she got angry.
+</p>
+
+<p>
+The killer in her was core-deep. It wasn't a bad habit she could break or a problem to handle with anger management classes; it was her nature. On the other hand, it wasn't a pure drive to kill. No matter how heated she was, she distinguished between friend and foe. But once she was in motion, she was set to go all the way. She didn't stop once the immediate danger was past.
+</p>
+
+<p>
+<i><b>Another second and he would have been mine.</b></i>
+</p>
+
+<p>
+Even just remembering the sound of her voice gave him a chill.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+As they walked up the steps to the front door of the Factory, Ido felt Alita looking at him with a question on her face. When they reached the top, he hefted the sack he was carrying and turned to her.
+</p>
+
+<p>
+"Listen," he said, and then his mind went blank. "Listen," he said again, taking out his Hunter-Warrior ID badge. "You&#x2014; we &#x2014; just killed two of the most notorious criminals in the city, and pissed off a third. Grewishka will come for us, even if friends of the other two don't."
+</p>
+
+<p>
+Alita nodded. "I understand."
+</p>
+
+<p>
+"Before the Fall, there were police to stop the criminals and protect the innocent," said Ido. "Now the Factory pays people like me to do their dirty work and stop criminals." And nobody protects the innocent, he added silently. He raised his badge over his head. "Hunter-Warrior 17739"
+</p>
+
+<p>
+"You're really a Hunter-Warrior?" Alita said, her voice quiet and tremulous.
+</p>
+
+<p>
+"Can I trust you to stay right here, whilte I'm inside?" Ido asked her. "You don't move for any reason?"
+</p>
+
+<p>
+"Yes," she said in a small voice.
+</p>
+
+<p>
+"Good." He didn't really want to leave her outside, but he didn't want her to have any part of the bounty process, not even as a witness. He had no qualms about her safety &#x2014; no one would start any trouble on the Factory's front steps unless they had a death wish.
+</p>
+
+<p>
+The enormous front doors rumbled open. Ido started to go in, then turned back to her. "And don't kill anybody."
+</p>
+
+<p>
+"I won't," she promised meekly.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Ido upended the sack, dumping the two heads out onto a metal plate so they could be scanned. A deckman slid into place on the other side of the counter. Exactly what deckmen were for was one of the Factory's great unanswered questions. As far as Ido could tell, their only role in the bounty process was to pop up and creep humans out, looking like trashcans with their cartoon faces and machine voices.
+</p>
+
+<p>
+"Bouty for the cyborg Nyssiana is twenty thousand credits," the deckman informed him. "Bounty for the cyborg Romo is forteen thousand credits."
+</p>
+
+<p>
+Ido had a strong urge to tell the deckman that, after all he'd gone through to deliver the heads, the Factory was getting a real bargain. And Romo would have been outraged to know that Nyssiana was worth more than he was.
+</p>
+
+<p>
+Tough stuff, fella, Ido thought, watching a mechanical arm weep the heads into a disposal chute. <i>She had better legs.</i>
+</p>
+
+<p>
+He had a sudden mental image of the cyborgs' heads tumbling down the chute, falling and falling and falling until they landed on a trash pile where a sadder and even more downtrodden version of humans hunted for salvage while looking up at Iron City, believing it was a better place and wondering what it was like to live there.
+</p>
+
+<p>
+His reverie broke as another mechanical arm droppped a sack of creadit chips on the counter in front of him, He stuffed them into the pocket of his coat.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Alita was waiting exactly where he'd left her, despite the fact that it was now pouring and she could have taken shelter closer to the building. The killing machine that didn't know enought to come in out of the rain. What was he going to do with her?
+</p>
+
+<p>
+"You should have told me who you really were," she said.
+</p>
+
+<p>
+/I could have said the same thing to you,/ he thought, and bit his tongue so he wouldn't say it aloud.
+</p>
+
+<p>
+"Is this just something you do for the money?" she asked as they descended the stairs and headed for home.
+</p>
+
+<p>
+"I take the money for the clinic," he said firmly, and a bit more defensively than he meant to. "Otherwise I'd have had to close up shop long ago. And there are other reasons I do this work, but I'd rather not talk about them."
+</p>
+
+<p>
+"But you have to!" she insisted, grabbing his coat sleeve. The emotions of a fourteen-year-old girl were always so close to the surface, so ready to flare. "You're not who I thought you were &#x2014; but something happened tonight, and I'm not who I thought I was!" She stopped, and took hold of both his hands with hers. Her pretty little hands, decorated with pretty little flowers and designs, had a grip to strong for him to pull free. "You know more about me than you're saying, I know you do. I need the truth."
+</p>
+
+<p>
+He was helpless before her, more helpless than he would have been before the killing machine. After a bit, he heard himself say, "I had a daughter. Her name&#x2014;her name was Alita."
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>这里骨架打掉一只胳膊, 另外一只胳膊抓依德的手, 他要怎么处决依德呢? 此处作者描写不上心.</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p>此处写得好!!! 月亮上没有大气层, 因此星星不会闪烁, 也因为没有大气层, 所以阳光不会色散和折射, 即使是在白天, 除了太阳照过来的方向, 整个天空都是黑色的. 寥寥数语就把月亮的特点描绘得如此生动, 佳作!</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p>此处写得好!!</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p>译注: 她不是刚换过一具身体吗?&#x2026;.</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p>此处存疑</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: liuweibo</p>
+<p class="date">Created: 2019-06-01 Sat 15:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

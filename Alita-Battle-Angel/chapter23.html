@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>chapter23</title>
+<!-- 2019-06-01 Sat 15:59 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="liuweibo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">chapter23</h1>
+<p>
+阿丽塔不知道她在手术室外边的长椅上坐了有多久. 十个小时, 十天, 亦或是十个世纪? &#x2014; 她分不出这其中的差异. 如果非要她猜不可, 她会选'十个世纪'.
+Alita had no idea how long she had been sitting on the bench outside the OR. Ten hours, ten days, ten centuries &#x2013; she couldn't tell one period of time from any other. If she'd had to guess, she'd have gone with centuries. She would have waited that long for her Hugo. Ido said she was three hundred years old &#x2014; what were a few more centuries between freinds? As long as Hugo lived, she didn't care how long it took.
+</p>
+
+<p>
+When she finally heard the OR door open, she bounced up infront of Ido, tears welling in her eyes, ready to spill down her cheeks.
+</p>
+
+<p>
+"How &#x2014; How is he?" she asked, afraid to raise her voice above a whisper.
+</p>
+
+<p>
+Ido dabbed at her face with a soft cloth. "You can see for yourself. He's in Recovery now."
+</p>
+
+<p>
+Alita dashed past him.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Even if the body wasn't a Berserker, it was A-grade, a composite that Ido had made himself, using the best parts and materials he could find. It was his own design, and when he had finished it, he had put it away carefully in cold storage, refusing to raid it for parts, no matter how depleted the clinic's inventory was. He'd had a hunch that someday this body would save a ife, and when the time came, he didn't want anything missing.
+</p>
+
+<p>
+Gerhad had been watching over Hugo since they'd wrapped up the cyber-surgery. In the past few weeks, they had done more embodying procedures than most repuable doctors did in a year. When things quieted down, Ido was going to suggest to Gerhad that she go for certification as a doctor &#x2014; i.e., just take the test. She had enought experience in cyber-surgery to count as coursework.
+</p>
+
+<p>
+Now she stepped aside with a smile as Alita went to Hugo's side. "He's good," Gerhad told her. "He's stable. No question, hell be all right."
+</p>
+
+<p>
+Alita touched HUgo's steel hand, so much like her own now. It wouldn't be as sensitive because it wasn't Urm technology, but it was the best work in Iron City, state of the art, top of the line. And maybe it wasn't such a bad thing that it wasn't as good as Alita's, Ido thought; the prospect of two Urm Berserkers running around together was a little scary.
+</p>
+
+<p>
+"I'm sorry, Alita," Ido said. She looked up from Hugo, her expression mildly puzzled. "This city &#x2014; enventually it finds a way to corrupt even the best of us and somehow the wrong people pay too dearly for other people's sins. Hugo didn't deserve what happened to him. Fortuantely, Chiren's surgical technique was brilliant &#x2014; genius actually, rigging your circulatory system to include Hugo as part of your body. There's no brain damage at all. And that brilliant heart of yours was strong enought for both of you."
+</p>
+
+<p>
+"Chiren knew how to do it," Alita said, smiling through her tears. "If it weren't for her, he'd be dead."
+</p>
+
+<p>
+Ido had a sudden mental image of Chiren in the cathedral, helping Alita and Hugo, and his heart skipped a beat, the way it had when he'd seen Chiren holding their daughter, talking to her, playing with her, rocking her to sleep. Chiren's blue eyes hadn't been cold then, they'd been bright, full of life and love. During those years when Motorball had been the outlet for their talen, they had been busy and happy, creating chapions for a game they both couldn't get enought of, and he had constructed a new body for their daughter, hoping to replace the one that wasn't strong enough.
+</p>
+
+<p>
+But when the game had betrayed them and destroyed their beautiful girl, Chiren's heart had frozen and she had gone over to the kind of life that they'd promised themselves they'd never live.
+</p>
+
+<p>
+Well, he had promised. He'd thought she had, too. But, to Chiren, life had broken its proimise, rendering any promises she'd made null and void. As time passed, Ido had begun to wonder if there was something in Chiren that had always been drawn to the worst that Iron City had to offer, and losing their daughter had simply freed her to follow.
+</p>
+
+<p>
+Either way, he'd thought the spirit of the woman he had loved had died with their little girl. But apparently, he was wrong &#x2014; there was still a spark of his Chiren alive inside the ice queen.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+"You had her heart in your hands &#x2014; <i>in you hands!</i> &#x2014; and you let her live." Vector came around his desk to grab Chiren by her upper arms and look into her face. "Why? just tell me that. Why?"
+</p>
+
+<p>
+She didn't try to twist azway, didn't even yell at him for putting his hands on her when he was angry. Maybe she'd finally lost her mind. Entirely possible &#x2014; she'd always been a little off. If he could sell Nova on the story that his Tuner had gone mad, and if Nova would give him a break for his past loyal service, he'd have Alita all boxed up and delivered within twenty-four hours. With whipped cream and a cheery on top.
+</p>
+
+<p>
+"Well?" Vector gave Chiren a hard shake. "Do you even know why?"
+</p>
+
+<p>
+Chiren was silent for so long he thought he was going to have to shake her a whole lot harder. Then she straightened up and looked him right in the eye.
+</p>
+
+<p>
+"Because I'm a doctor. And a mother." She lifted her chin in defiance. "Somehow I'd forgotten that."
+</p>
+
+<p>
+Vector pushed her away and threw his hands in the air. "And what the hell am I supposed to do with that?"
+</p>
+
+<p>
+Chiren turned her back on him, on the view of Zalem, and on his enormous shiny desk. "I can't do this any more. It was one thing when it was just big stupid beasts fighting each other in the streets or on the Motorball track. But this&#x2014;" She shook her head and walked towards the door. "I'm leaving."
+</p>
+
+<p>
+"Chiren, wait!" It came out sounding more desperate than he'd have liked. She stopped, although she only turned her head a little instead of turning around.
+</p>
+
+<p>
+"I understand now I can't keep you here any longer," Vector said slowly, doing sincere as if his life depended on it, becasue it probably did. "But if you're going to leav, don't you think it's time &#x2014; past time, really &#x2014; that you left for Zalem?"
+</p>
+
+<p>
+Now she did turn around, and for a moment he wondered if she had seen the shadow behind the opaque glass of the door. But the way she was looking at him, her eyes too bright with tears of joy and her face alive with hope and gratitude, knew she hadn't.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+It had been hard, but Ido finally managed to get Alita out of the OR so Hugo could get some rest. She couldn't stop herself from talking to him, and if she kept it up, he would wake up too soon. Hugo needed all the rest he could get before he faced the world in this new and different body.
+</p>
+
+<p>
+<i>O brave new bodym that has a Hugo in it.</i>
+</p>
+
+<p>
+Ido shook the thought away. His mind always generated nonsense when he was overtired. But sleep would have to wait; his patient was going to need him. Two patients, really &#x2014; somehow he had to make Alita understand that what was normal, even exhilarating, for her would be traumatic for someone who'd been completely organic before waking up as to Total Replacement cyborg.
+</p>
+
+<p>
+On the plus side, Hugo was young enought that his brain was still growing, so his central nervous system would probably adjust more easily to its nrew embodiment and accept it as natural. On the other hand, what had happened to his father would make it very difficult for Hugo to accept what had happened to him. And then there was what Ido would have to tell him about his grand dream of going to Zalem. He was going to take that hard &#x2014; once he got Hugo to believe him, anyway. He was having a hard enought time convincing Alita of the truth.
+</p>
+
+<p>
+"Vector was running a scam on Hugo," Ido said wearily. "I told you, if you're born on the ground, you stay on the ground &#x2014; no exceptions, not for any amount of money. And the only way to get from down here to up there is to become Motorball Final Champion. That's it. You cannot buy your way up there. No one can."
+</p>
+
+<p>
+"How do you know that?" Alita said.
+</p>
+
+<p>
+"Because I'm from Zalem," Ido said finally. "I was born there," He pointed at the small pale scar in the centre of his forehead. "I used to have the same mark Chiren has &#x2014; the mark of Zalem. I removed it myself. Because our daughter wasn't perfect, becasue she was ill, Chiren and I were forced into exile with her down here. The magnificent floating city doesn't tolerate the weak, the sick, the defective. The man responsible is Nova, the Watcher behind the eyes. And because I fathered something imperfect, I couldn't go back up there if I wanted to."
+</p>
+
+<p>
+Alita was staring at him wide-eyed and open-mouthed.
+</p>
+
+<p>
+"And that is how I know Hugo was never going to get to Zalem. Hugo was conned. Vector's nothing more than a jumped-up con artist who doesn't care about anyone. He just strings them along with promises so they'll keep doing whatever he wants."
+</p>
+
+<p>
+Alita peered at him with a searching look, as if she were trying to find some evidence in his face that he was wrong, even as her shoulders slumped and her eyes lost their brightness. She knew he was telling her the truth.
+</p>
+
+<p>
+"I'm sorry," Ido added, wishing he were apologising for being wrong instead of right. He was about to say something else when there was a loud crash in the OR.
+</p>
+
+<p>
+"No!" Hugo yelled. "Nooooo, noooo!"
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Hugo had fallen off the table and was pulling IV lines and the nutrient tube out of his chest. Now he was strugglng to his feet, still groggy despite his shock. Alita bit back tears; she had to help Hugo, not cry over him. But when she moved towards him, he backed away, waving her off with a wild movement that took out a shelf of beakers and equipment, sending broken glass, sensors and shattered bits of circuit board all over the floor.
+</p>
+
+<p>
+"This was all for nothing?" Hugo cried, his cheeks wet with tears. "Everything I did, all the people I hurt &#x2014; all for nothing?" He staggered to one side and knocked over a tray of surgical instruments, scattering calipers, retractors and scalpels. He kicked the tray across the room where it smashed into the far wall, dislocating a shlef of scanners and biochemical tracers, which fell on a freestanding cabinet below. The cabinet wobbled and tipped over with a terrible crashing sound of metal and glass.
+</p>
+
+<p>
+Hugo didn't know his own strength, Alita realised. She had to calm him down.
+</p>
+
+<p>
+"And now, look at me!" he sobbed, holding his metal hands out. "Look at what I've become &#x2014; look! I used to make fun of them when I was ripping them apart &#x2014; and now look at me!" He raised his metal hands and looked at them. "It's too perfect. It's exactly what I deserve."
+</p>
+
+<p>
+As he droppped hjis hands and turned away, Alita wrapped him up in her arms. He was strong but he was no match for a Berserker. She hugged him tightly, keeping him still until Ido could sedate him. Hugo bristled when he felt the needle go into his neck, then slumped in Alita's arms.
+</p>
+
+<p>
+"It will be better tomorrow," Ido promisde gently.
+</p>
+
+<p>
+雨果眼睛向上, 绝望地看着依德: "明天对于死人来说, 又有什么用呢?"
+Hugo raised his eyes and looked at Ido indespair. "What good is tomorrow to a dead man?"
+</p>
+
+<p>
+"我与你同在,<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>"  阿丽塔一边把他扛回手术台上, 一边说. "只要我两在一起, 其他的事情都不重要." 她握住雨果的手, 依德趁此机会连上静脉注射和营养给药. 还好它们没有断.
+"I see you," Alita told him as she carried him back to the table. "As long as we have each other, nothing else matters." She held his hand while Ido reconnected the IV lines and the nutrient feed. They hadn't broken, at least.
+</p>
+
+<p>
+一切本不该如此, 她伤心地想到. 仅仅短短的几周之前, 他一直在帮她为她的重要的预选赛训练做准备. 她的
+It wasn't supposed to be like this, she tought sadly. Only a few short weeks agao, he'd been helping her train for her big tryout. Her big tryout&#x2014;what a joke that turned out be. Before that, he'd taken her out to the crashed spacecraft in the Badlands, to show her something that might help her with her memory. To help her, to help her &#x2013; he'd done everything he could to help her. And in return, he'd been framed for murder and, for thr grand finale, run through with a Hunter's sword. And he owed it all to her and her insistence on remembering her past.
+</p>
+
+<p>
+"我真希望我从没有发现过我的本身身份," 阿丽塔突然冒出这样一句话. "这只给每一个我爱的人带来了折磨! 我很抱歉, 我真的很抱歉"<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>
+"I wish I'd never found out who I was," Alita blurted suddenly. "It's only made everyone I love suffer! I'm sorry. I'm so sorry."
+</p>
+
+<p>
+Ido turned her around to face him. "Don't you ever apologise for who you are," he said, his face intent and serious. "This is why you're here. You're the only one built for this." <sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup>
+</p>
+
+<p>
+She nodded, smearing away tears with the back of one metal hand. "And I have to face it all head on." Suddenly she caught sight of herself in the mirror over the sink. For a moment, she sttod very still, felling the Damascus Blade in her hand, feeling a purpose in herself that was slowly making itself clear to her.
+</p>
+
+<p>
+Staring at her reflection, Alita became aware of a drop of water shimmering at the lip of the tap. It hung there for another second before it fell. The Damascus Blade was a bright streak in the air as she cut the drop in half.
+</p>
+
+<p>
+"I want to thank you," Ido said as she turned back to him. "Because of you, I got to see my little girl grow into an exceptional woman. One who's going to save the world."
+</p>
+
+<p>
+"Thank you, Father." Alita said as Ido dried her tears again. She leaned over and kissed Hugo gently on the forehead before she left.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+The Factory dorrs rumbled open. Alita stood with the daylight at her back, wondering how she must look to the Centurians lining the walls &#x2014; a small silhouette standing in a rectangle of brightness. Something long and slightly curved extended down from her right hand, heat shimmers rippling in the air around it. Blue plasma cast no shadow but it was as real as anything&#x2014;as real as the Damascus Blade, as real as she was and what she had come here to do.
+</p>
+
+<p>
+/"Vectorrrrrrr!"/ she roared.
+</p>
+
+<p>
+The Centurians' gun turret swivelled around to point at her. Her Berserker reaction time put her ten metres into the hall by the time they fired at the spot where she had been. Still firing, the guns swivelled again, shoot chunks out of the floor, the walls, the ceiling as they tried to get a fix on her. More Centurians stumped into the hallway, spraying the place with bullets and taking out other Ceturians in the process. Someone had adjusted their programming from KILL-INTRUDER to KILL-INTRUDER-AT-ALL-COSTS, and Alita was pretty sure she knew who that was.
+</p>
+
+<p>
+Unhurt, she vaulted onto the back of one of the reinforcements and plunged her plasma hand into its brain case, causing it to freeze. The others registered her location but she had already leaped away as they shot the frozen Centurian into scrap. She bounced up beside another, sliced off its gun with the Damascus Blade and dragged it along with her.
+</p>
+
+<p>
+"Violation! Violation!" A deckman came down off the bounty platform and rolled towards her.
+</p>
+
+<p>
+<i>Oh, come on&#x2014;seriously?</i> It really was no more than a tin can, and not a very good one. ALita used the Centurian's gun to blow it to pices.
+</p>
+
+<p>
+Past the bounty platform, she saw a bank of three elevators. Two went no highter than the floor where Vector's office and penthouse suite were located. The third stopped on the level below, where there was maintenance access.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Vector had already been waiting seral hours for dispatch top pick up the cambinet in his office and send it up to Zsalem wheen the alert came in from Security. The cyborg girl his hired thugs had failed to kill, Alita, was coming up the front steps, and she was obviously loaded for bear. After the past couple of days, he wasn't in the mood for any more of her steel-assed bullshit and he'd set the Centurians to "Overkill". After they obliterated her, he intended to send whatever was left up in a plastic bag to the Wathcer. If Nova wanted her heart so bad, he could piece it back together like a jigsaw puzzle.
+</p>
+
+<p>
+Vector was pretty sure the Centurians would close Alita's case before she got as far as the bounty platform. But the gunfire went on and on and Vector began to get annoyed. It was one thing for a gang of hired killers to screw up&#x2014;it wasn't like any of them were geniuses. But Centurians had big guns, a perfect aim, and they couldn't be outsmarted or distracted in a limited space like the entry hall.
+</p>
+
+<p>
+When the sound of gunfire finally died away, Vector stabbed the intercom key.
+</p>
+
+<p>
+"Security, report!" he barked. "Did you get her?"
+</p>
+
+<p>
+He waited for someone to babble apologies for the noise, but there was no response.
+</p>
+
+<p>
+"Security, dammit, report!"
+</p>
+
+<p>
+Still nothing. Someone was definitely going to die before the day was out. He was trying to decide who and how many when his skylight exploded.
+</p>
+
+<p>
+Shards of glass rained down on him, cutting his face and hands, sticking in his hair and clothing. He tried to brush himself off and ended up pushing the glass even deeper into his skin. A whole bunch of epople were going to die for this, Vector thought, momentarily blind with rage. The stupid skylight was supposed to be shatterproof, made with the same kind of glass they used in Zalem. Obviously someone had swapped out the good stuff and left him with Iron City crap while making themselves a fortune on the black market. When he found out who, he was going to kill them so hard it would wipe out everyone in a six-block radius&#x2014;
+</p>
+
+<p>
+Then he saw her in the middle of the room, and all thought ceased.
+</p>
+
+<p>
+Alita assumed a fighter's stance: knees slightly bent, hands up to protect her face as she glowered at him. Like she felt she mattered to him&#x2014;like she mattered at all. She looked around, straightened up and walked over to his desk. "You were never going to send Hugo to Zalem," she accused him, her big eyes as dark as her voice. "Were you?"
+</p>
+
+<p>
+"I always keep my promises to send people up," he said, but he could tell she didn't buy that. What the hell&#x2014;the girl wasn't getting out of his room alive; it wouldn't matter if she knew. "Like Dr Chiren here," Vector added, gesturing vaguely at the cabinet in the coner of his office. Alita looked at where he gestured, then back at him with a puzzled expression
+</p>
+
+<p>
+Vector walked over to the cabinet and rapped his knuckles on it, but the girl still didn't get it. He shrugged and deactivated the seal so he could open the front. If dispatch came now, they could just wait a few minutes, he thought, as a little vapour snaked out of the refrigerated interior. As long as he didn't leave the door open too long, nothing would spoil. A minute or two would probably do it. Alita wouldn't be able to distinguish any of Chiren's packaged internal organs from the mystery meat they sold in the market, and she probably wouldn't recognise Chiren's hands, as lovely as they were. But he wasa sure she'd know those blue eyes. They were packaged separately in transparent containers and secured side by side, to indicate they were a set. They were as beautiful and as cold as they had ever been. Literally cold.
+</p>
+
+<p>
+"If dispatch ever get their asses in gear, she'll go up with the rest of tonight's shipment." Vector gave the girl another few seconds to be thoroughly horrified before he closed the cabinet up and reactivated the seal. "Who the hell knows what the boss does with any of this." He rapped his knuckles on the case again. "And that is the only way anyone ever gets to Zalem."
+</p>
+
+<p>
+Vector smiled, seeing the shadow through the opaque glass in the door behind Alita. This was going to be good.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Alita saw Vector start to duck just as the door crashed inwards. Berserker reaction time let her protect her face from the various fragments, which bounced harmlessly off her body. But the grind-cutter didn't bounce. It sliced through her side and she fell to the floor, holding the wound as bright-blue cyber-blood poured out between her fingers.
+</p>
+
+<p>
+"I knew you would not wait for your fate to find you," Grewishka said, towering over her in ugly triumph.
+</p>
+
+<p>
+Then he vanished.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+They were under attack.
+</p>
+
+<p>
+Zalem was under attack. The wind was screaming past her ears as the supply tube she was climbing with the rest of her squad shivered and rocked&#x2014;not much, but enought to make it tricky to hang on. They were up pretty high but they still had some distance to go. Gelda was leading them, urging them upwards, reminding them every metre, every centimetre, every millimetre was a gain.
+</p>
+
+<p>
+At this height, they had to be ready for the bladed rings that appeared without warning and slid down along the supply tubes. These were the floating city's defence against any ground-dwellers foolish enough to think they could simply climb to a better life in a better place, neither of which they had nay right to. Alita and her squad had alreadyfired on a few with plasma rifles and shoulder-mounted missile launchers, blowing them into fragments that went spinning off into the void.
+</p>
+
+<p>
+The squad had just destroyed anohter one when the side of the tube blew out.
+</p>
+
+<p>
+Earth and sky slewed crazily as Alita clung to the tube, dragging herself forwards until she was clinging to the jagged, still-hot edge of the hole. The wind was quickly drying splashes of heart's-blood and cyber-blood on the tube and on the parts of dead and dying cyborgs still stuck to the metal.
+</p>
+
+<p>
+Her whole squad was gone, she realised. Now what was she supposed to do?
+</p>
+
+<p>
+A hand reached down and clamped onto her wrist. Alita looked up to see Gelda's torn face, bleeding blue in some spots, seeping red in others.
+</p>
+
+<p>
+"You know Zalem's defences!" Gelda shouted at her over the wind. /"Finish the mission!"/
+</p>
+
+<p>
+<i>Finish the mission!</i>
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Grewishka was back, looming over her. Under her fingers, Alita felt the wound inher side closing up, healing itself, and she knew it wasn't just temporary selant.
+</p>
+
+<p>
+<i>How about that?</i> She got to her feet.
+</p>
+
+<p>
+"I know who you are," she said to Grewishka, her voice low and dangerous. "You're a child of the underworld, taken to live up her as a slave. And I'm just an insignificant girl." As she spoke, she felt a sudden profound pity for Grewishka, for the utter tragedy of the life he had been forced to live. "Die knowing this&#x2014;the people who did this terrible thing to you will suffer. I'll <i>make</i> them suffer."
+</p>
+
+<p>
+Grewishka laughed at her and she found it in herself to pity him even more. Chiren had rebuilt him into something like a walking truck. His thick arms and bulky shoulders were vaguely suggestive of a gorilla but there was no life in them, only machinery. His torso was a distinct triangle, made so his lower body could be attached easily. His thick metal legs were shaped like a human's, but such exaggerated musculature didn't exist organically; his feet were more like a Centurian's.
+</p>
+
+<p>
+And all of this was toppped off with the last vestige of his humanity. His head and face were protected by his over-built shoulders. To Alita, however, it looked less like protection and more like the machinery was swallowing him.
+</p>
+
+<p>
+The body was no good for anything except killing&#x2014;killing her, to be precise. Grewishka had become nothing more than a Centurian with more metal and less purpose.
+</p>
+
+<p>
+"My master Nova is os eager to meet you," Grewishka said. "Allow me to introduce you!"
+</p>
+
+<p>
+The intake doors on Alita's arm opened with a discreet hushed noise as they drew air in. Blue fire blossomed on her hand, flowed over the pommel of the Damascus Blade and ran along its length like a living thing.
+</p>
+
+<p>
+Sneering, Grewishka pointed and his grind-cutter flew out from his hand. There was a blinding flash of blue light and then the grind-cutter was writhing impotently on Vector's shiny marble floor.
+</p>
+
+<p>
+The cyborg bellowed with rage and fired all the rest of his grind-cutters at once. Alita leaped into the air, performing a whirling dance with the brilliant blue flames, moving too fast for Grewishka's brute eyes to follow. But afterwards he had no trouble seeing the other four grind-cutters dying on the floor like headless snakes.
+</p>
+
+<p>
+Grewishka raised both fists and charged at her. She dodged him effortlessly and one fist demolished one of Vector's absurdly ostentatious pillars, leaving a pile of rubble below the ragged piece of stone hanging down from the ceiling like a weird stalactite.
+</p>
+
+<p>
+Time slowed as she somersaulted over Grewishka's head. In hisbewildered, upturned face, she caught the barest hint of the innocent he'd never really been, before she dropped straight down, driving the Madascus Blade so that it bisected him from the top to bottom. Alita landed on one knee with her back to the monster, not wanting to see the two pieces fall away from each other.
+</p>
+
+<p>
+<i>This city&#x2014;eventually it finds a way to corrupt even the best people.</i>
+</p>
+
+<p>
+Ido had said that, and she had told him the problem wasn't the streets or anything else in the city, but up above. There waas no pleasure in knowing she was right, she thought as shee go to her feet and turned to Vector, who was cowering behind his desk.
+</p>
+
+<p>
+"NO, no, wait!" he pleaded, backing away from her as her moved towards him. "Please, just wait&#x2014;" He dripped on nothing and fell on his expensive ass. Alita walked around the desk, watching him try to scuttle away from her like a bug. She raised her arm and drew it back so the point of the Damascus Blade was aimed at his left eye.
+</p>
+
+<p>
+"Speak," she commanded.
+</p>
+
+<p>
+"Sure, what do you want me to say? I'll say anything, tell you anything," Vector babbled. He was backed up against another of his stupid classsical-knock-off pillars. "Anything, just tell me what to say&#x2014;"
+</p>
+
+<p>
+"Not you," Alita said. "Him."
+</p>
+
+<p>
+Vector had a fraction of a second to look terrified before his eyes went dead and his face lost all expression.
+</p>
+
+<p>
+"So we finally meet, Alita," he said in a calm. inhuman voice.
+</p>
+
+<p>
+"Nova." The name felt like a profanity.
+</p>
+
+<p>
+"May I?" asked the Watcher, making a small gesture at the space between them. When she didn't move, he shrugged, got to his feet, and made a business of smoothing Vector's clothing and brushing off any remaining bits of glass, ignoring the cuts and scratches they left on Vector's skin.
+</p>
+
+<p>
+"Where are you?" Alita asked.
+</p>
+
+<p>
+"Home, as we speak. Feet up. Very comfortable." He ganced out of the window at the floating city, then moved past her to sit Vector's body on the edge of the desk. He was looking at her with what she realised was supposed to be a mischievous grin. But implanted optics didn't twinkle, and neither did Vector's dead eyes.
+</p>
+
+<p>
+"Well, my girl, you've certainly exceeded all expectations, mine included," he said. As if he were comlimenting a small child on their homework. "Killing my chapion Grewishka&#x2014;most inpressive! And turning a selfish creature like Chiren to your side&#x2014;I never saw that coming. You're definitely more insteresting to me alive than dead. And we're from the same place, which in these hard and perilous times makes us practically <i>family.</i> "
+</p>
+
+<p>
+She waited, her sword ready and unwavering.
+</p>
+
+<p>
+"You can go ahead and walk out of here and the Factory will not stop you." The watcher made Vector wink at her &#x2014; a neat yet nauseating trick for someone who hadn't had eyelids in centuries. "<i>This</i> time."
+</p>
+
+<p>
+"I don't need your permission to live," she said evenly.
+</p>
+
+<p>
+"Ah, but others might." He chuckled. "Your precious Dr Ido, for example. And what about your beoved Hugo? Yes, I know he's still alive. Althought not for long&#x2014;we'll track him down." Nova laughed again. "I've found the best way to enjoy immortality is to watch others die."
+</p>
+
+<p>
+Fury surged throught her. She gave Vector's body a hard shove that put him flat on his back on the desk with his legs dangling, then raised the Damascus Blade with both hands. All at once the Watcher vanished and it was just Vector on the desk, looking terrified.
+</p>
+
+<p>
+"Please, don't" he begged. "I'll do anything! I'll make you a chapion in the Game. You're good. The crowd loves you! I'll give you anything you want, just please don't kill me!"
+</p>
+
+<p>
+And then as Alita was staring at him in uncertainty, the Watcher was back. "See? No character. None whatsoever."
+</p>
+
+<p>
+In answer, Alita drove the Damascus Blade throught the centre of his chest, pinning him to the wood.
+</p>
+
+<p>
+"Then you'll enjoy losing your puppet," Alita said.
+</p>
+
+<p>
+Nova lifted Vector's head to look at the sword sticking out of him. "That does look fatal," he agreed. "Well, no matter. Vector was getting tiresome." He coughed; heart's-blood leaked from his mouth and he began to tremble. But still the Watcher kept his eyes clear and focused. "Oh, Alita, you poor child. Everything you've gone through and still no answers."
+</p>
+
+<p>
+"And you've just made the biggest mistake of your life," Alita said matter-of-factly.
+</p>
+
+<p>
+"What would that be?" asked the Watcher, as if indulging a clever but insolent child.
+</p>
+
+<p>
+"You let me live."
+</p>
+
+<p>
+Nova made Vector smile, exposing blood-soaked teeth. "Then adieu, until our next meeting. And remember&#x2014;" He was losing his hold on the last shreds of Vector's life. " <i>I see everything</i> "
+</p>
+
+<p>
+He was gone. Alita pulled the Damascus Blade free, letting Vector's body slide to the floor. She stared at his corpse, but there was no pity in her for the man who had lied so egregiously to Hugo, to Chiren, and to all the other sad, lost souls who'd thought they could get out of Iron City in one piece.
+</p>
+
+<p>
+Her phone rang, making her jump. For a mopment she was afraid it was <i>him</i> , with one last word. But her relief at hearing Ido's voice was short-lived.
+</p>
+
+<p>
+"Factory enforcers came looking for Hugo," He told her. "Somehow they found out he'd been kept alive. I sneaked Hugo out of here but they've sealed the city. The Factory's determined to find him."
+</p>
+
+<p>
+"Do you know where he went?" Alita asked.
+</p>
+
+<p>
+"He &#x2014; oh, God, Alita, he's trying to go up."
+</p>
+
+<p>
+<i>Y'know, if I were as strong as you, I'd climb that tube to Zalem right now.</i>
+</p>
+
+<p>
+Alita ran to the window and looked out, scanning each of the spider-leg supply tubes until she made out a tiny fiture working his way upwards to the flying city he thought was heaven. Only because he didn't know what really lived there.
+</p>
+
+<p>
+<i>You know Zalem's defences---</i>
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>标准詹姆斯卡梅隆式台词, 赞!</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p>这句衔接电影里面被剪切的片段, 验证悲剧的不可避免性, 这更证明了在悲剧面前, 人的自由意志的价值.</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p>译注: 此处电影片段有删减, 补完之后台词流畅很多</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: liuweibo</p>
+<p class="date">Created: 2019-06-01 Sat 15:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

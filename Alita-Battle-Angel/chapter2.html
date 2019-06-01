@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>chapter2</title>
+<!-- 2019-06-01 Sat 15:58 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="liuweibo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">chapter2</h1>
+<p>
+格哈德护士已经将她的机械臂上的手术工具换成了一只普通的手, 正准备回家的时候听到了楼下的门口打开又关闭的声音. 在经历了一天忙碌的照顾病患和换取零件, 依德仍然坚持要去垃圾堆里面翻一翻, 看看是否能够找到一些有用的零件; 格哈德说她太累了不想跟着依德一起去, 依德倒也没有介意. 在捡垃圾这件事情上, 她无论如何也不如依德, 即使她不累的时候. 她的个人感受影响了她. 从一些废弃物中挑拣一个注定更好的, 可望而不可及的世界扔下来的垃圾这个这个点子仅仅是在脑海里想一想就让她受不了, 若是真让她去干这些事, 恐怕她可能真的会死.
+</p>
+
+<p>
+她也如同这钢铁城的其他人一样, 并不知道那些有得没得的事情. 她的家庭一直生活在钢铁城, 其中大部分成员现在仍然生活在钢铁城. 这些人里面有那么一两个冒险家类型的人起身前往未知的地区搜索更好的居住地, 但是自从他们离开就再也没有听到他们的消息了. 格哈德并不认为这是件好事. 她也从来没有想过要做这样的事情. 就她所知: 破败之地并没有护士的岗位招聘, 或者任何类似的岗位也没有. 即使那里在招聘护士, 那里也不会有另外一个戴森依德. 在钢铁城里面戴森依德也是独一份, 除非你把冰川女皇算上, 格哈德当然不考虑后者.
+</p>
+
+<p>
+格哈德一直避免想到依德的前妻. 她本来也不会想到这茬, 如果不是依德这次带回来的东西的话. 看到他急匆匆跑商楼梯的样子, 格哈德以为他找到了一整袋满满的伺服器. 他们需要更多的伺服器, 他们一直需要更多的伺服器. 但事实是 -&#x2014;
+</p>
+
+<p>
+锁靠在立体定位仪上的依德带回来的机械核心是她万万没想到的. 这比带回一整袋钻石戒指更让人难以相信. 不过如果换做是她发现了一个被遗弃的人类的机械核心, 她也会把它带回来. 但是她认出来这张脸了; 它既不可能也不会是那个人; 然而这如同真人一般大小的核心却是真正让人心碎: 即便是依德的心已经真真切切地碎了. 她不确定已经破碎的心如何能再次碎裂, 但是生活本身却又如此有新意.
+</p>
+
+<p>
+将机械核心固定在架子上后, 依德跑到楼下找东西. 她知道他要找什么, 但是当他重新出现, 手里抱着一个小孩的身体似得的东西的时候, 格哈德仍然屏住了呼吸. 事实上这就是一个依德曾经制作的孩童的身体. 但是那个孩子从来没有用过这具身体, 自那以后令人心碎的几年, 依德将其收起来了. 看到他轻轻地将这具身体放在手术台上, 跟机械核心放在一起. 格哈德的心中五味杂陈.
+</p>
+
+<p>
+这具身体非常美丽, 是一件艺术品, 一个深沉的爱的表达. 她明白为何依德将其束之高阁, 但是内心中她仍然觉得让这样一个杰出的作品弃之不用仍然是一件错误的事情. 有一段时间, 她曾经希望依德有一天能够超脱, 让另外的人从他的创作中受益. 那将意味着他已经痊愈了, 而这是依德永远不会允许自己做的事情.
+</p>
+
+<p>
+依德在手术室里面四处蹦跶, 准备手术; 而当格哈德把她的工具消毒, 准备参与准备工作的时候, 他制止了她. 他正在重新矫调微型手术机械臂过程中突然停了下来, 看了看手术台上正在沉睡的机械核心. 在术前浸泡剂和脑部营养液中泡了两个小时的机械核心的眼睛正在闭合的眼皮低下来来回回不停地运动. 正确的来说: 她的眼睛, 她的闭合的眼皮; 随着复苏进程的继续进行, 她越来越像那个依德每天无数次盯着全息影像中的姑娘, 每天.
+</p>
+
+<p>
+现在他走到手术台前伸手触摸她的脸颊, "你梦到什么了? 小天使." 他用一种温柔的语气问到. 这种温柔格哈德护士已经很长一段时间没有听到过了. 他转向格哈德, 她惊讶的发现依德眼里有泪水.
+</p>
+
+<p>
+他突然又开始四处不停走动, 设置微型手术工作台, 运行诊断机器, 重复检查机械臂. 他没有跟格哈德说过一句话, 他也不必这样做. 格哈德是一个注册护士, 受过机械手术的训练. 她总是能够知道她应该做什么.
+</p>
+
+
+<hr  />
+
+
+<p>
+二十四小时并不是格哈德在手术室里面呆过的最长的时间, 但是这个二十四小时却是最紧张的那个二十四小时. 在使用微型手术臂和要求她从六块不同的屏幕上读取输出并不停地汇报给他这件事情上, 依德一直有一点狂热, 或者说偏执的, 仅仅是因为他自己没有额外的六对眼珠来自己读. 她完全不知道他是如何一边在这些微小的神经连接中引导微型手术臂, 一边还分神记住这些数字的. 他就是这么样的优秀 -&#x2014; 与他共事了那么久, 格哈德护士仍然时不时地被依德的知识面的宽度和深度所震撼.
+</p>
+
+<p>
+就像现在, 她一边这么想, 一边看着蜘蛛似的手术臂, 按照一场由依德编排的精致的芭蕾舞蹈舞动. 当这些手术妻妾在工作的时候, 他并不需要在这些手术器械面前踌躇 -&#x2014; 依德医生自己设计并建造了这些手术器具, 这些手术器具也从来不会故障, 除非你用锤子砸它们, 即便是有时候你用锤子砸了, 这些器械也不会故障. 医生自己的双手稳定又熟练, 但是就微型手术臂现在在执行的操作来说, 它们还是太大了; 这些微型手术臂就像依德的自然延伸, 他必须亲自见证每一条血管的连接, 每一条肌肉纤维的连接, 每一条神经元的连接.
+</p>
+
+<p>
+依德转向格哈德, 以微弱得几乎无法察觉的程度点了点头. 于是她从冰箱里面拿出两个袋子. 其中一个装着标准的生化人的血液 - 心血. 另外一个袋子, 大小几乎是前面一个袋子的两倍, 装满了泛着彩色光泽的天蓝色机械血液. 这里 "血液" 这个术语用得不是很准确. 因为机械血液跟生化机体的关系更密切, 并且使用纳米机器人传输养料, 而不是传统意义上的红细胞或白细胞. 格哈德只有一只机械手臂, 因此她不需要像这个完全替换身体的小女孩一样需要那么多的机械血液. 格哈德需要的机械血液的量甚至比普通的成年人要更少.
+</p>
+
+<p>
+格哈德将两个袋子放在输液台上, 设置好输液的流速, 只待依德启动输液开关了. 他嘟囔了一声表示感谢然后扭了扭头示意格哈德解散, 当然, 是暂时解散. 他希望格哈德保持警惕, 随时待命. 格哈德一度没有办法接受这样的同医生的交流方式, 除了依德之外的医生都不行.
+</p>
+
+
+<hr  />
+
+
+<p>
+格哈德遇到依德的那一天, 她正躺在术后休息室的床上, 哀悼随着她的手臂一起丢掉的职业前途. 她知道依德的大名 -&#x2014; 医院的每个人都知道依德医生收治病人这件事. 格哈德就曾经建议过病患去他的门诊.
+</p>
+
+<p>
+当依德告诉她, 他不但可以挽回她的职业生涯, 还可以让她的职业技能更进一步的时候, 格哈德一度认为出现在她面前的依德只是一些跛脚的止痛药带来的幻觉. 这想法并不是没有道理的. 她也曾是医院的职员, 工厂对医院的药物供应一直不足. 药房没办法只得寻找其他的替代用品. 结果过去的几周里出现了这样那样的问题: 骨头断了的病人进了医院, 服完药出去之后变得横冲直撞, 暴躁万分; 偏头痛的患者吃了药之后一整晚都在疯, 见一个人吻一个. 奇怪的是, 并没有任何人抱怨, 就算抱怨了也没有办法解决.
+</p>
+
+<p>
+工厂曾经承诺把事情解决, 不过他们可没说得用多久来解决. 护士长告诉护士们: 除了祈祷, 其他的事情她们什么也做不了. <i>可千万不要有人受伤啊!</i>
+</p>
+
+<p>
+祈祷完的三个小时后, 格哈德换班了, 她走出医院的前门, 这个时候一辆失控的陀螺货车横着朝医院的大门的前脸扫过来. 这一下砸坏了所有的窗户, 半打新装上去的医疗设备, 一个刚栽下的 "禁止停车" 的标示, 和格哈德的左手.
+</p>
+
+<p>
+不知为何, 虽然记忆有断片, 但是她一直保持清醒. 上一刻她刚走出医院的人行道, 医院的大门在她身后关闭. 下一刻她就躺在了地上, 身边都是碎玻璃, 破碎的水泥块, 潮湿的凝血, 黑色的泥土和扯坏的花朵. 她记得她的手臂断了, 和手臂一起断送的还有她作为护士的职业生涯.
+</p>
+
+<p>
+护理工作并不是她一直以来期望的全部: 帮一些总是犯重复的相同的错误的人治疗是一件很糟糕的事情. 重复的工作使得她从下半身从脚到屁股都很酸, 她呕吐的次数远远超过她之前的想象. 但是这工作也有好的一面. 有时候她会遇到一些拒绝被环境所击溃的人, 又或者至少自己不是自己最坏的敌人.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: liuweibo</p>
+<p class="date">Created: 2019-06-01 Sat 15:58</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

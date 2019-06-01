@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>chapter16</title>
+<!-- 2019-06-01 Sat 15:58 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="liuweibo" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">chapter16</h1>
+<p>
+The operation was a marathon procedure that tooke twice as long as the first one, although much that time was spent disconnecting Alita's cyber-core from the wreckage that had been Ido's work of art.
+</p>
+
+<p>
+When Gerhad had seen what Grewishka had done to Alita, it had been all she could do not to break down, not just for Alita, but also for Ido. He'd been here before and, although Chiren had made the monster that had destroyed his little girl, Gerhad knew Ido was blamming himself. She hadn't thought anything could happen that would make Ido punish himself anymore than he already had, and still did. But apparently she'd had no idea what Chiren was capable of. The woman had to be the coldest, most heartless person in Iron City &#x2014; and that was saying something. It was hard to believe she had ever been a mother &#x2014; of a human being, anyway.
+</p>
+
+<p>
+Gerhad looked at the girl on the operating table. After almost two days, most of the re-embodiment procedure was finished; all the nerves were physically connected, and both circulatory systems &#x2014; cyber-blood and heart's-blood &#x2014; were functioning. In fact, Gerhad had never seen a face pink up so quickly. It was as if this was the body Alita should have had all along.
+</p>
+
+<p>
+And yet Ido had been so dead set against uniting her with it. Gerhad had been afraid this would drive a permanent wedge between him and Alita, pushing them so far apart that they'd never find their way back to each other. Worse, Gerhad suspected Ido didn't realise what he doing. <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> After Chiren had left, alienation had become his default setting. Gerhad was close to him only in a professional capacity, as his nurse. Given the nature of his practice, the relationship involved a certain amount of intimacy &#x2014; the wellbeing of their patients depended on their understanding each other. But it wasn't the personal intimacy shared by good friends.
+</p>
+
+<p>
+For a while, Gerhad had thought it was. A surgical team was a well-oiled machine, and its members were the moving parts, all working for the same goal. It was easy to feel closer to your team than anyone else, including your family, which was a quick way to lose your family. Neither she nor Ido had families to lose;<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> the only problem would have been if Ido had shown a romantic interest in her.<sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> Fortunately, he hadn't. Before long, she realised he wasn't interested in anything beyond their professional relationship. He tolerated her personal disclosures without impatience but didn't volunteer any of his own.
+</p>
+
+<p>
+Ido would always be the man who had given her back her life, and she would always love him for that. Even if it was solely pragmatism on his part, his complete acceptance of her, no questions asked, was more than she'd ever had in any other relationship, professional or personal. And so she continued her nursing career in circumstances that were less than perfect but more fortunate than most.
+</p>
+
+<p>
+Gerhad had never considered doing anything that might disturb the equilibrium between her and Ido. But then he had brought Alita's cyber-core home, and Gerhad had wondered what it would do to him. He had seemed happy to be a father again, but Alita was not his daughter. Supposedly he knew that. But as time passed, Gerhad realised this Alita was going to become less and less like his daughter. How would that play out?
+</p>
+
+<p>
+Then Alita had brought the Berserker body home and turned Ido's world upside down. The argument between them had started while Gerhad was still cleaning up after the usual long day. Gerhad Knew Ido excepted her to make an inconspicuous exit as soon as things got heated, but instead she had gone down to the basement and pretended to sort laundry, not coming back upstairs until Alita had run out.
+</p>
+
+<p>
+Ido had retreated to the kitchen to sulk over a cup of tea. Gerhad knew he wouldn't want company so she'd taken a close look at the Berserker body. It was a magnificent thing &#x2014; Gerhad had never even imagined anything like it. Under different circumstances &#x2014; if, say, she had been a former nurse with one arm and no prospects &#x2014; she might have been strongly tempted to roll it up in a carpet and try her luck on the black market.
+</p>
+
+<p>
+She had tried to imagine wide-eyed, angel-faced Alita embodied in it and couldn't. This wasn't a young girl's body.
+</p>
+
+<p>
+And maybe that was the real problem, Gerhad thought. Ido could go on about not wanting blood on Alita's pretty flowered hands, and advanced weapons, and how lucky she was to start over with a clean slate. But Gerhad suspected that, in truth, he didn't want to let his little girl go. He'd given her the lovely young-girl body his little girl should have had, with the beautiful flowers and the silver and gold inlays, and he wanted her to stay that way.
+</p>
+
+<p>
+When he'd lost his daughter, he had lost the chance to see her grow up. His Alita was fourteen, now and forever.
+</p>
+
+<p>
+Gerhad had come very close to going into the kitchen that day, sitting down at the table with him, and telling him this. But it would have been the last thing she ever told him. Ido wouldn't have argued or yelled at her or told her to mind her own business; he simply would have fired her, effective immediately, and even if he regretted it later &#x2014; even if he decided she'd been right &#x2014; she would nerver be welcome in his clinic again.
+</p>
+
+<p>
+Well, if this had been a more typical argument between a father and daughter &#x2014; something less  drastic that didn't involve having her entire body replaced, maybe just an enhancement, or even contraception &#x2014; would she have hustled her bustle in there to have a word with him?
+</p>
+
+<p>
+Hell, no. She wasn't a parent. For all the insight she might have, the only advice she was actually qualified to give anyone about their kids was first aid, good nutrition, and how to take their temperature. Suggesting they might be having a problem with the idea of a kid growing up was not her business, even if she was right.
+</p>
+
+<p>
+But now circumstances had forced Ido to unite Alita with the Berserker. To his credit, he hadn't hesitated, hadn't substituted one of the other TRs in cold storage. He'd given her what she'd wanted and he hadn't seemed a bit reluctant about it. He had leaned over and whispered, "No one will dare harm you again."
+</p>
+
+<p>
+Gerhad moved closer to the table and saw that Alita's eyes were moving back and forth below her closed lids. What could the girl be dreaming about? she wondered. Not Greishka, certainly &#x2014; her face was far too peaceful.
+</p>
+
+<p>
+She appeared to be engrossed in whatever dreams her mind had conjured up. Maybe her lost memories were playing like movies in her head. But when she awoke, she'd forget them all, because nothing was that easy for anyone, not even a girl in a Berserker body.
+</p>
+
+<p>
+And it would be even harder for Ido, Gerhad thought. At the moment, he was all cyber-surgeon, surrounded by display screeens and swivelling on his chair from one to another, then rolling over to the table to check on the patient. But soon he would be Ido the grieving father again.
+</p>
+
+<p>
+Gerhad frowned and moved closer to the table. Was she seeing things or were Alita's fingers longer than the last time she'd looked? Yes, they were, and they gained another millimetre as she watched. That was a relief. Going Crazy was pointless int Iron City, which was itself the most insane place in an insane world.
+</p>
+
+<p>
+Of cause, she didn't have to be crazy to start seeing things, just tired. Two major cyber-surgeries in such a short period of time &#x2014; that was pushing the limitsof human stamina and technology both. Gerhad decided to run a quick diagnostic on her cyborg arm. It would flag any problems with the human operator.
+</p>
+
+<p>
+Her arm checked out fine. In fact, it was more than fine. Ido had built it to perform more complex tasks and procedures than those they usually had to deal with in the clinic. Re-embodying Alita had made full use of its capabilities. Gerhad also seemed to be fine, althought the diagnostic flagged her fatigue as something that needed her immediate attention. It recommmended a minimum of eight hours of uninterrupted sleep. Gerhad thought twenty hours was more like it.
+</p>
+
+<p>
+Fatigue was one of the reasons cited most often by people opting for a cyber enhancement. In many cases, one enhancement led to another &#x2014; improvements in one area tended to make people dissatisfied with their unenhanced parts. Gerhad had never suffered from new-part fever herself but that was probably because her cyber-arm hadn't been an optional upgrade. Or maybe she just wasn't tired enought yet.
+</p>
+
+<p>
+Now she could see that Alita's shoulders were measurably broader and her chest was becoming less androgynous by the second. Gerhad found this unsettling enought that she had to look away. In her time as a nurse, she had seen all kinds of things -&#x2014; gory, weird, eerie, scary, absurd, even maraculous &#x2014; but nothing as trippy as advanced Urm technology.
+</p>
+
+<p>
+Gerhad gave it a minute before looking back at Alita. Yeah, those were breasts. Alita's waist had narrowed and her hips were now quite womanly. No delicate flowers on creamy pink skin, no gold and silver inlays etched with lovely scrollwork. The biomechanoid body was beautiful, but it was a strong and formidable beauty that also happened to be anatomically correct.
+</p>
+
+<p>
+"It's the adaptive technology of the Berserker body," Ido said. Gerhad jumped; she had all but forgotten that he was in the room. "The corporeal shell is reconfiguring to match her image of herself &#x2014; her new image, that is. Her brain knows there's been a change in her embodiment. This body registered as more mature biologically, with increased capabilties, and the brain reacts accordingly. It's mutual feedback between her core and her corpus as they progress towards a state of unity."
+</p>
+
+<p>
+Gerhad nodded. Re-embodiment could be tricky. If the cyber-core held onto anything from its previous incarnation, it would have trouble adjusting to a new form. Sometimes all it tookk was a couple of faulty pH readings and a patient woulld wake up with a bad case of dysmorphia or even outright rejection.
+</p>
+
+<p>
+"I've never seen anything like this," Ido went on. "The body's doing most of the work, making micro-adjustments to all the systems on every level." He tilted his head at the displays. The sheer volume of data on them would have overwhelmed anyone else &#x2014; and it wasn't a tea partyfor Ido's big brain, either, Gerhad realised, taking in his puffy, bloodshot eyes and overall haggard look. This had pushed him to the limit of his capability, and he was probably so busy relishing the challenge that he didn't know how tired he really was.
+</p>
+
+<p>
+"Well, however this works. I'd say Alita isn't your little girl any more," Gerhad told him cheerfully. "She's all grown up. Officially a woman."
+</p>
+
+<p>
+Ido's face went bright red and he averted his gaze. "Indeed she is. And in that spirit, we should respect her, uh, privacy, Would you mind, uh &#x2014;"
+</p>
+
+<p>
+Gerhad had already taken a surgical sheet from the shelf under the table. She shook it out and draped it over Ido's erstwhile little girl.
+</p>
+
+<p>
+"Thank you, Nurse," Ido said in a stiff, professional tone and went back to the displays.
+</p>
+
+<p>
+Gerhad put a hand over her mouth to keep from laughing. The poor guy had no idea what he was in for. Alita really wasn't a little girl any more. Kids here grew up too fast anyway. Iron City was that kind of place. But the social and psychological forces that acted on the average kid didn't include being maimed to within a millimetre of their lives by a monster in a sewer.
+</p>
+
+<p>
+Even when Alita had been down to one arm with her had broken off and jammed into Grewishka's eye, she had defied him, refusing to be defeated even when the monster was about to kill her. After something like that, the standard Iron City resident would probably spend the next few years curled up in the foetal position, crippled with PTSD. But not Alita &#x2014; she'd have been back on her feet and looking for payback without a Berserker body.
+</p>
+
+<p>
+But with one &#x2014;
+</p>
+
+<p>
+Urm's advanced sciencce may have strained Ido, but he was about to discover that when it came to his little girl &#x2014; who was not a little girl any more &#x2014; he was completely out of his depth.
+</p>
+
+<p>
+<i>Welcome to the next phase of fatherhood,/ Gerhad thought. /You poor bastard.</i>
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Someone kissed his forehead.
+</p>
+
+<p>
+Ido woke to find himself stretched out on the sofa. He should have given it to Gerhad, he thought guiltily as he ast up blinking, trying to make his eyes open wider. He had to check on his little girl. Alita was &#x2014; she was &#x2014;
+</p>
+
+<p>
+She was not his little girl any more, her remembered, looking at the lovely young woman standing in front of him. He looked at her sleekly muscled arms and legs and her easy, graceful stance. At least she's got good posture, his mind babbled. Without taking his eyes off her, he reached over and shook Gerhad, who was asleep in the chair beside the sofa. She slapped his had away, started to say something, and then say why he'd roused her.
+</p>
+
+<p>
+"Well," Ido said after a bit, when he was sure he wasn't going to cry. "Look at you."
+</p>
+
+<p>
+Alita gave him a warm smile. She bent causually to one side as if to pick something up off the floor and just as causually went into a one-armed handstand. Ido watched her draw her fingers together; the handstand became a one-fingerstand. Slowly, with no visible effort, and remaining perfectly balanced, she lowered her legs into a split.
+</p>
+
+<p>
+Ido was still giving thanks that Gerhad had thought to put underwear on her when Alita flexed her elbow and flipped herself back up on her feet.
+</p>
+
+<p>
+"You were right, Alita," he said humbly. "A warrior's spirit needs a warrior's body."
+</p>
+
+<p>
+She held up her right hand, showing him the small vents on her forearm; they were breathing while a small blue flame danced over her fingertips.
+</p>
+
+<p>
+"The vents draw in air to generate arc plasma," Ido said. "But don't ask me what's controlling it. I mean, you are, of cause, but the exact mechanism involved &#x2014;" He shrugged. "You didn't come with a manual, I'm afraid." He pointed to intake ports higher up, on her bicep. "That's part of some kind of weapon, probablly also arc plasma. And that's pretty much all I can tell you. Now you know as much about who you are as I do."
+</p>
+
+<p>
+Alita sat down beside him on the sofa. She was still smiling but there was a hint of uncertainty in her face.
+</p>
+
+<p>
+"You know, all this &#x2014;" Ido Gestured at her body. "All this beauty and strength and ability &#x2014; this is the shell. It's not bad and it's not good. That part's up to you."
+</p>
+
+<p>
+She surprised him by resting her head on his shoulder. /Not my little girl any more, except when she is,/ Ido thought, putting his arm around her shoulders. For some unmeasured period of time, they stayed that way, watching the late afternoon rain running down the windows in rivulets. He and Gerhad had slept most of the day, but Ido felt like he could sleep a few more hours. He'd almost dozed off again when Alita suddenly spoke up.
+</p>
+
+<p>
+"Grewishka told me someone from up above saved him and turned him into who he is." Pause. "He said it was his master, Nova."
+</p>
+
+<p>
+Ido sighed. "Grewishka is a crazed monster, spawned to play a corrupt game by an even more corrupt system. Actually, he's just the latest in a series. They've made a lot of monsters like him that roam the streets until people like me take them out."
+</p>
+
+<p>
+"It's not the game or the streets are the problem," Alita said. "The problem is up above. Up there."
+</p>
+
+<p>
+"But we're all down here, in this world. Our world," Ido replied. He drew back a little to smile at her. "You know, I told Hugo I'd call him when you were awake."
+</p>
+
+<p>
+Alita bounced to her feet with a thousand-watt smile. "I'll go find him!"
+</p>
+
+<p>
+"Not dressed like that, you're not," Gerhad told her firmly. "Let me find you some clothes that aren't quite so&#x2014;" She hesitated. "in-patient."
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Walking &#x2014; the simple act of putting one foot in front of the other &#x2014; was so much better now, Alita thought as she strode along the crowded night-time streets. The rain had stopped, although rain seldom had much effect on Iron City's nightlife. The Berserker body made it a lot easier to make her way throught the crowds, although that may have been due simply to her being taller. It helped to be on eye-level; people gave way for a woman more readily than for a kid. Being more substantial helped, too. Not that she'd ever been easily moved, but now she looked like someone you couldn't push around.
+</p>
+
+<p>
+Part of her felt a little bad about what had happened to her old body &#x2014; Iod's labour of love. Maybe it was the relief of finally being who she was that gave her a deeper understanding of what that pretty little cyborg body had meant ti Ido. It had deserved better &#x2014; much, much better.
+</p>
+
+<p>
+On the other hand, if Ido had undersood what the Berserker body had meant to her and done what she had asked, his work of art wouldn't have been sliced up by a monster in a sewer. So they each had some responsibility, and if she understood that, Ido probabaly did, too, even if he didn't say anything. Some grown-ups were like that &#x2014; as Gerhad had pointed out to her once: some people wouldn't say shit if they were standing neck-deep in it.
+</p>
+
+<p>
+Ido wasn't really like that, though. As soon as he had realised what the Berserker body meant for her, he hadn't hesitated or tried to palm a different TR off on her. Nobody was perfect, but Ido tried to be; she had to give him that. It was a lot more than she could say for most people, especially the ice queen who had sicked Grewishka on them. Her heart had to be a frozen lump, Alita thought; maybe she'd freeze over completely and be nothing but a bunch of parts on ice. Which might be pretty soon, if those cold blue eyes were any indication.
+</p>
+
+<p>
+Alita pushed the thought away, unsure how her mind could have turned to Chiren when she simply wanted to enjoy her new physicality. She couldn't remember what it had been like to be completely organic, but she thought that it must have been a lot like this &#x2014; well, if the organic body in question happened to be in peak condition.
+</p>
+
+<p>
+But it was more than just physical. The power she felt in her arms, her legs, her shoulders, her torso and back, seemed like something that had always been within her, waiting for her to find it. Or to wake it? Maybe she just had to realise she had it at all. Strength and endurance were things of the body but something in her core &#x2014; in the core of her core &#x2014; gave them life. Her memory of what had happened to her hadn't come back completely yet, but this was her muscle memory of being alive, conscious and embodied. She was a warriror spirit in a warrior body.
+</p>
+
+<p>
+Alita paused, looking around. The traffic on the sidewalks as well as the streets was incresing. The crowds wouldn't start thinning out till sometime after one A.M. As convenient as it was to get around in her new, grown-up form, it might take her almost that long to find Hugo, especially in the busier parts of town. But there was a better way.
+</p>
+
+<p>
+She stepped off the sidewalk into a narrow passageway between two buildings. For a minute, she studied each structure's outer surface, looking at the various protrusions &#x2014; windowsills, narrow wrought-iron balconies, drain pipes, old bits of fire escapes half stripped away by scavengers. Then she launched herself upwards.
+</p>
+
+<p>
+The sheer physical pleasure of the leap seemed to give her extra momentum. As she rebounded between the two buildings, from drain pipes to windowsills to wrought-iron bars, it crossed her mind that what she was doing had been known at one time in the dim, distant past as parkour, although she had no idea how she knew that. it didn't worry her &#x2014; a tidbit of information shaken loose from some obscure nook or cranny. There was plenty she couldn't remember and she didn't know why that was, either, but she kept on keepin' on anyway, so what the hell.
+</p>
+
+<p>
+On the roof, Alita stopped to breathe deeply, not because she was winded but becasue she liked the smell of rain in the air. She looked up at the overcast sky and saw something twinkle brightly. Not a star, but a light from one of the tall buildings at the edge of Zalem. The city was a slightly darker shadow in the night-time rain clouds. It was almost as if Zalem had caught something of what she'd been feeling and wanted to remind her that there was always a ceiling, always something out of reach, even for her.
+</p>
+
+<p>
+/We'll see,/ she told the shadow silently.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+The bodysuit Gerhad had found for her was really a good piece of clothing, Alita thought as she bounded from rooftop to rooftop, pausing to scan the streets below The plain black fabric was light but tough, and it breathed so she didn't get overheated when she exerted herself. (Which was a good thing, as Ido had insisted she wear a raincoat over it.) It was a lot like skin, minus the pain receptors.
+</p>
+
+<p>
+Not that she knew much about human skin or pain receptors. A warrior spirit didn't give two craps about pain. She'd conquered pain so long ago, she couldn't even remember what it felt like. How she could know that, when she hardly knew anything at all, was another one of those little mysteries, along with why she could shake a memory loose only by spitting in death's face. Or poking it in the eye.
+</p>
+
+<p>
+She had so many questions; she even had questions about questions. But she'd worry about that later. Right now, all she really wanted to do was find Hugo. Was he ever going to be surprised!
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Alita finally spotted Hugo hanging around in front of the CAFE cafe with Koyomi and Tanji and a few other members of his crew. Seeing him made her feel like the sun had come out inside her, filling her up with light. And warmth. She had to take a steadying breath before she made her way back down to street level, going from window ledges to drain pipes to bare centimetres of uneven brick. Finally, she droppped from an old-fashioned faux-neon sigh to make a three-point landing on the sidewalk, startling a couple who had been looking dreamily into each other's eyes. She gave them a thumbs up and headed towards Hugo.
+</p>
+
+<p>
+Tanji was talking to him about something. His gaze passed over her without recognition &#x2014; she could tell because his face didn't immediately curdle. A couple of seconds later, he looked at her again, frowning a little, and started to say something else to Hugo. Koyomi had recognised her; she gave Hugo a hard nudge and pointed.
+</p>
+
+<p>
+Hugo's double take was faster. Recognition didn't come right away, but she watched it dawn on him as she approached, until finally his face lit up with jouful relief and he ran to meet her. He swept her up in his arms &#x2014; with an effort &#x2014; and swung her around &#x2014; with even more of an effort.
+</p>
+
+<p>
+"Alita! You're all right! You're &#x2014;" Hugo put her down as he discovered there had been some changes since he'd last seen her. Standing back, he gave her a long look from head to toe.
+</p>
+
+<p>
+"Wow," he said, noticing what she had on under the raincoat. "You're all&#x2014;"
+</p>
+
+<p>
+"Back together?" she suggested, making them both laughed.
+</p>
+
+<p>
+"Yeah, you're way bakc together," he said. "You look real, uh&#x2014;"
+</p>
+
+<p>
+Alita could practically see the little gears and wheels turning in his head as he tried to find the right word.
+</p>
+
+<p>
+"Different," he said finally.
+</p>
+
+<p>
+Behind Hugo, Koyomi was grinning broadly as she gave Alita two thumbs up. Tanji looked unimpressed, but it took so much effort that he couldn't manage his usual sour face. Alita almost felt sorry for him. She winked at Koyomi and took Hugo's arm. He put his hand over hers and they walked off together.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+"It's all nanotech this and nanotech that," Alita told Hugo. She wasn't sure how long they'd been walking or where they were and she didn't care. "I don't understand it and Ido says there's a lot about it even he hasn't been able to figure out yet."
+</p>
+
+<p>
+"S you're stronger now?" Hugo asked.
+</p>
+
+<p>
+She nodded. "And faster. And I feel so much more &#x2014; well, <i>me.</i> "
+</p>
+
+<p>
+Hugo gave her a thoughtful, sideways look. "You know, some guys would be intimidated by a girl like you."
+</p>
+
+<p>
+"Really?" Alita blinked at him. "Why?"
+</p>
+
+<p>
+"Oh, probably because you could rip out my arm and beat me to death with the wet end," he deadpaned.
+</p>
+
+<p>
+"Well, there's an easy solution for that," she said, smiling. "Don't piss me off."
+</p>
+
+<p>
+HUgo threw back his head and roared with laughter and she laughed with him, delighted (and a bit relieved) he thought it was funny.
+</p>
+
+<p>
+"I always knew there was a warrior in you, Alita," he said when he wound down. "And now the rest of the world gets to see that, too."
+</p>
+
+
+<p>
+<i>Alita. He said my name</i>
+</p>
+
+<p>
+It wasn't the first time, not even the first time that evening. But it was the first time he'd called her Alita and meant Alita the warrior. She had never thought she would be this happy, about anything.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+When they came to the bridge, Alita realised they must have walked in a large circle and they were now back near the CAFe cafe. But she had no sense of time passing or distance travelled. For all she knew, time had stoppped altogether. If so, she had no problem with that.
+</p>
+
+<p>
+When they were halfway across the bridge, they stopped to look down at the river. It had risen quite a lot and was flowing more energetically than usual. It must have rained practically non-stop while she'd been down for repairs, Alita thought. She was about to ask Hugo about it when he took her hand and twined his fingers with hers.
+</p>
+
+<p>
+Did he miss the flowers, she wondered, or the silver and gold inlays with the pretty patterns etched on them? Or the swirling lines on her fingertips?
+</p>
+
+<p>
+"I'm more sensitive now, too," she told him. "Ido says it's due to the much higher density of force feedback and texture sensors. What that means is&#x2014;" She tooke her hand away and slipped her arm out of her coat, then held her hand out to him again. "Well, try it."
+</p>
+
+<p>
+HUgo turned her hand over and ran his fingers over the back, past her wrist and all the way up to her shoulder. "Can you fell that?" he asked.
+</p>
+
+<p>
+She nodded, wondering if he could feel how she was loving his touch.
+</p>
+
+<p>
+"Close your eyes," he said and she obeyed. A moment later, she smiled as his fingertip moved gently along the side of her neck. "Where am I now?" he said.
+</p>
+
+<p>
+Eyes still closed, she put her fingers over his. He stroke her cheek with his other hand and she sensed his face moving closer to hers, so close she could feel the warmth radiating from his skin.
+</p>
+
+<p>
+"And where am I now?" he asked and kissed her. His lips were surprisingly soft and tender and she kissed him back, hoping he could tell how much she loved this, the feel of him. The young girl covered with flowers had stood up to a monster, but she had not been ready for this; the woman she had become.
+</p>
+
+<p>
+"You're with me," Alita whispered when they moved apart. All at once, she felt self-conscious and dropped her gaze. "As you can see, I can do anything a regular girl can do."
+</p>
+
+<p>
+"Anything?" Hugo said.
+</p>
+
+<p>
+"Anything," she promised, smiling as his finger traced a line from her temple down to her chin. "Does it bother you that I'm not &#x2014; well, you know &#x2014; completely human?"
+</p>
+
+<p>
+He used the finger under her chin to lift her head so he could look into her eyes. "You're the most human person I've ever met."
+</p>
+
+<p>
+They went on kissing and then it was raining again, coming down hard and straight so they were both drenched within a minute, Hugo in his light jacket and Alita with her raincoat half on and half off, and no night had ever been so utterly, wonderfully perfect.
+</p>
+
+
+
+
+<hr  />
+
+
+
+
+<p>
+Sitting by the window in CAFE cafe, Tanji made a contempuous noise. Koyomi looked up from her wrist-cell screen and followed his gaze. The sight of Hugo and Alita kissing made her grin from ear to ear. Tanji shook his head.
+</p>
+
+<p>
+"God, what's your damage?" Koyomi asked him, annoyed. "Why don't you like her?"
+</p>
+
+<p>
+"I just never got that whole hardbody thing," he said, making his usual disapproving face. "And that Urm body she's wearing fits her like it was made for her. Which probably means she was the enemy."
+</p>
+
+<p>
+Koyomi rolled her eyes. "Oh, sure &#x2014; three hundred years ago. Get over it already, why dontcha?"
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>译注: 原文此处有语病</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p>译注: 此处与原文第二章矛盾</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p>译注: 辣眼睛, 为了凑字数, 作者也是挖空了脑洞写一些无聊的内容了</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: liuweibo</p>
+<p class="date">Created: 2019-06-01 Sat 15:58</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
